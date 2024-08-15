@@ -1,0 +1,7 @@
+# Ignore the build folder
+build/
+
+# Ignore minified files
+*.min.js
+
+# Ignore specific files
