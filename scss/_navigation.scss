@@ -1,0 +1,22 @@
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 340px;
+}
+
+.logo {
+   width: 130px;
+   height: 30px;
+}
+
+.nav-btn-container {
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   width: 150px;
+   padding: 4px;
+   align-items: center;
+   gap: 4px;
+   flex-shrink: 0;
+}

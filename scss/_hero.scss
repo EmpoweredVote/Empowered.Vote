@@ -1,0 +1,47 @@
+.hero-container {
+   background: $dark-blue;
+   margin: 1em 1em 80px 1em;
+   border-radius: 1em;
+   min-height: 600px;
+   padding-top: 12px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   overflow: hidden;
+}
+
+.hero-content {
+   color: $font-color;
+   text-align: center;
+   display: flex;
+   gap: 2em;
+   flex-direction: column;
+   align-items: center;
+}
+
+.hero-text {
+   font-family: Thunder;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 12px;
+   align-self: stretch;
+}
+
+.title {
+   font-size: 64px;
+   margin: 90px 24px 0px;
+   font-variation-settings: 'wght' 700, 'CNTR' 0;
+}
+
+.subtitle {
+   font-size: 32px;
+   font-style: italic;
+   font-weight: 500;
+   line-height: 100%;
+   margin: 0;
+}
+
+.crowd {
+   width: 110%;
+}

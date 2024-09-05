@@ -1,0 +1,56 @@
+.why-section {
+   background-color: $sandy;
+}
+
+.why-text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.why-title {
+   margin-top: 40px;
+   margin-bottom: 16px;
+
+   font-family: Thunder;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+
+.why-subtitle {
+   margin: 0px 70px 40px 70px;
+   text-align: center;
+
+   font-family: Manrope;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+.scroll-section {
+   height: 800px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.scroll-text {
+   text-align: center;
+   font-family: Thunder;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 120%;
+   letter-spacing: 0.03em;
+
+   margin: 0px 40px;
+}
+
+.number-icon {
+   margin-bottom: 16px;
+}

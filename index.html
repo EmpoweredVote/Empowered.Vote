@@ -3,13 +3,19 @@
    <head>
       <meta charset="UTF-8" />
       <link rel="stylesheet" href="css/styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+         rel="stylesheet"
+      />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Empowered.Vote</title>
    </head>
    <body>
       <section class="hero-container">
          <nav>
-            <img src="assets/images/Logo.png" class="logo" />
+            <img src="assets/images/Logo.svg" class="logo" />
             <div class="nav-btn-container">
                <button class="orange-btn">JOIN US</button>
                <button class="flex-btn">
@@ -54,5 +60,174 @@
          <img src="assets/images/Crowd.svg" class="crowd" />
          <!-- <img src="assets/crowd.png"> -->
       </section>
+      <section class="card-section">
+         <div class="text-container">
+            <h1>Putting people before parties</h1>
+            <p>
+               We are building a civic platform that empowers Citizens in the
+               Information Age. It’s a broad solution, so we focus our features
+               across a few distinct vectors:
+            </p>
+         </div>
+         <div class="card">
+            <h2 class="card-title">Citizens</h2>
+            <p class="card-text">
+               If a democracy is going to be guided by its Citizens, then
+               Citizens must participate in the process. We leverage game
+               development techniques to make healthy civic participation as
+               engaging as possible.
+            </p>
+            <div class="image-container">
+               <!-- Make the background of the image container blue -->
+               <img src="assets/images/megaphone.svg" id="megaphone" />
+            </div>
+         </div>
+         <div class="card">
+            <h2 class="card-title">Speakers</h2>
+            <p class="card-text">
+               For those looking to interact with others, we’ve created a series
+               of small, connected communities. Each is actively designed to be
+               productive, leveraging mediation techniques developed in the
+               behavioral sciences.<br />
+               <br />
+               It’s not <span>Me</span> versus <span>You.</span> <br />It’s
+               <span>Us</span> versus a <span>Shared Problem</span>.
+            </p>
+            <div class="image-container">
+               <!-- Make the background of the image container blue -->
+               <img src="assets/images/Citizens.svg" id="buildings" />
+            </div>
+         </div>
+         <div class="card">
+            <h2 class="card-title">Leaders</h2>
+            <p class="card-text">
+               Candidates must raise tens of millions to mount an effective
+               electoral campaign. When we require wealth to get elected, then
+               our democracy will primarily serve the wealthy.
+            </p>
+            <div class="image-container">
+               <!-- Make the background of the image container blue -->
+               <img src="assets/images/Ballot.svg" id="ballot" />
+            </div>
+         </div>
+      </section>
+
+      <section class="why-section">
+         <div class="why-text-container">
+            <h1 class="why-title">Why Shared Solutions?</h1>
+            <h3 class="why-subtitle">
+               There are three reasons we focus on Shared Solutions:
+            </h3>
+         </div>
+         <div
+            class="scroll-section"
+            data-color="#FF5740"
+            data-default-rect="#FF5740"
+            data-default-num="#FFFFFF"
+            rotation="14.5deg"
+         >
+            <div class="number-icon">
+               <svg
+                  width="65"
+                  height="65"
+                  viewBox="0 0 65 65"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <rect
+                     id="rect1"
+                     x="0.172363"
+                     y="0.171875"
+                     width="64"
+                     height="64"
+                     rx="14"
+                     fill="#FF5740"
+                  />
+                  <path
+                     id="num1"
+                     d="M29.9383 49.0039V21.5959L29.6983 21.2119H27.3943V15.4039H36.6583V49.0039H29.9383Z"
+                     fill="white"
+                  />
+               </svg>
+            </div>
+            <div class="scroll-text">
+               A solution sincerely shared lasts for a very long time without
+               requiring any manipulation or coercion to remain in place.
+            </div>
+         </div>
+         <div
+            class="scroll-section"
+            data-color="#00657C"
+            rotation="-12.5deg"
+            data-default-rect="#00657C"
+            data-default-num="#FFFFFF"
+         >
+            <div class="number-icon">
+               <svg
+                  width="81"
+                  height="81"
+                  viewBox="0 0 81 81"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <rect
+                     id="rect1"
+                     x="0.568359"
+                     y="0.568359"
+                     width="80"
+                     height="80"
+                     rx="14"
+                     fill="#00657C"
+                  />
+                  <path
+                     id="num1"
+                     d="M29.0611 29.7764C29.0611 26.0217 30.0638 23.1417 32.0691 21.1364C34.1171 19.0884 36.9971 18.0644 40.7091 18.0644C44.3784 18.0644 47.1944 19.067 49.1571 21.0724C51.1198 23.0777 52.1011 25.979 52.1011 29.7764V30.5444C52.1011 34.299 51.5678 37.5204 50.5011 40.2084C49.4771 42.8537 47.8344 44.859 45.5731 46.2244L43.9731 47.1204C42.7784 47.8457 41.7971 48.4857 41.0291 49.0404C40.2611 49.5524 39.6424 50.043 39.1731 50.5124C38.7464 50.9817 38.4478 51.4937 38.2771 52.0484C38.1064 52.5604 38.0211 53.179 38.0211 53.9044V54.9924H51.9731V63.5684H29.0611V55.4404C29.0611 53.5204 29.1891 51.899 29.4451 50.5764C29.7011 49.211 30.0851 48.0377 30.5971 47.0564C31.1518 46.0324 31.8558 45.1577 32.7091 44.4324C33.5624 43.6644 34.5864 42.9177 35.7811 42.1924L37.1251 41.4884C38.3624 40.763 39.3651 40.1444 40.1331 39.6324C40.9011 39.0777 41.4984 38.5444 41.9251 38.0324C42.3944 37.4777 42.7144 36.9017 42.8851 36.3044C43.0558 35.707 43.1411 34.9604 43.1411 34.0644V29.1364C43.1411 26.9604 42.2878 25.8724 40.5811 25.8724C38.8744 25.8724 38.0211 26.9604 38.0211 29.1364V36.9444H29.0611V29.7764Z"
+                     fill="white"
+                  />
+               </svg>
+            </div>
+            <div class="scroll-text">
+               Shared Solutions are a prerequisite for Democracy, World Peace,
+               and the Golden Rule.
+            </div>
+         </div>
+         <div
+            class="scroll-section"
+            data-color="#59B0C4"
+            rotation="14.5deg"
+            data-default-rect="#59B0C4"
+            data-default-num="#FFFFFF"
+         >
+            <div class="number-icon">
+               <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 80 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <rect
+                     id="rect1"
+                     width="80"
+                     height="80"
+                     rx="14"
+                     fill="#59B0C4"
+                  />
+                  <path
+                     id="num1"
+                     d="M42.6383 28.632C42.6383 26.4133 41.7636 25.304 40.0143 25.304C38.2649 25.304 37.3903 26.4133 37.3903 28.632V33.56H28.4303V29.208C28.4303 25.496 29.4543 22.6373 31.5023 20.632C33.5503 18.584 36.4303 17.56 40.1423 17.56C43.8543 17.56 46.6916 18.5627 48.6543 20.568C50.6169 22.5733 51.5983 25.4533 51.5983 29.208V29.976C51.5983 31.64 51.4063 33.0907 51.0223 34.328C50.6809 35.5653 50.2116 36.6107 49.6143 37.464C49.0596 38.2747 48.3983 38.9147 47.6303 39.384C46.9049 39.8107 46.1369 40.088 45.3263 40.216V40.792C46.1369 40.8773 46.9049 41.1547 47.6303 41.624C48.3983 42.0507 49.0596 42.712 49.6143 43.608C50.2116 44.4613 50.6809 45.528 51.0223 46.808C51.4063 48.0453 51.5983 49.5173 51.5983 51.224V51.992C51.5983 55.7467 50.6169 58.6267 48.6543 60.632C46.6916 62.6373 43.8543 63.64 40.1423 63.64C36.4303 63.64 33.5503 62.6373 31.5023 60.632C29.4543 58.584 28.4303 55.704 28.4303 51.992V47.64H37.3903V52.568C37.3903 54.744 38.2649 55.832 40.0143 55.832C41.7636 55.832 42.6383 54.744 42.6383 52.568V49.688C42.6383 47.5547 42.3183 46.0827 41.6783 45.272C41.0809 44.4187 39.7796 43.992 37.7743 43.992H36.4943V37.144H37.7743C38.7556 37.144 39.5663 37.0587 40.2063 36.888C40.8463 36.6747 41.3369 36.3547 41.6783 35.928C42.0623 35.4587 42.3183 34.8613 42.4463 34.136C42.5743 33.4107 42.6383 32.536 42.6383 31.512V28.632Z"
+                     fill="white"
+                  />
+               </svg>
+            </div>
+            <div class="scroll-text">
+               Committing to the pursuit of Shared Solutions gives us a
+               framework to highlight when those among us do not belong.
+            </div>
+         </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+      <script src="js/sectionScroll.js"></script>
    </body>
 </html>

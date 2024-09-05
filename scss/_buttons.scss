@@ -1,0 +1,37 @@
+@mixin button-styles($background, $color, $padding, $border-radius) {
+   background-color: $background;
+   color: $color;
+   padding: $padding;
+   border-radius: $border-radius;
+   border: none;
+   text-align: center;
+   font-family: $font-family;
+}
+
+.orange-btn {
+   @include button-styles($orange, $font-color, 8px 24px, 8px);
+   height: 40px;
+   width: 96px;
+   font-size: 20px;
+   font-variation-settings: 'wght' 700, 'CNTR' 0;
+}
+
+.cta {
+   @include button-styles($orange, $font-color, 8px 24px, 8px);
+   height: 48px;
+   font-variation-settings: 'wght' 700, 'CNTR' 0;
+   font-size: 20px;
+   text-transform: uppercase;
+   letter-spacing: 0.03em;
+}
+
+.flex-btn {
+   display: flex;
+   width: 36px;
+   height: 14px;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+   background-color: white;
+   border: none;
+}
