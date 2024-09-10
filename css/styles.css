@@ -1,10 +1,10 @@
 @font-face {
   font-family: Thunder;
-  src: url(/assets/fonts/Thunder-VF.ttf);
+  src: url(../assets/fonts/Thunder-VF.ttf);
 }
 @font-face {
   font-family: Manrope;
-  src: url(/assets/fonts/Manrope-VariableFont_wght.ttf);
+  src: url(../assets/fonts/Manrope-VariableFont_wght.ttf);
 }
 .orange-btn {
   background-color: #ff5740;
