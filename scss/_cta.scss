@@ -1,0 +1,43 @@
+.cta-card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: $sandy;
+   height: 500px;
+   width: 360px;
+   padding: 24px;
+   box-sizing: border-box;
+   margin-left: 15px;
+   border-radius: 16px;
+   position: relative;
+   margin-bottom: 100px;
+}
+
+.cta-card h1 {
+   color: $dark-blue;
+   text-align: center;
+   font-family: Thunder;
+   font-size: 64px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   margin-bottom: 16px;
+   z-index: 1;
+}
+
+.cta-card p {
+   color: $black;
+   text-align: center;
+   font-family: Manrope;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin-bottom: 32px;
+   z-index: 1;
+}
+
+.cta-card svg {
+   position: absolute;
+}

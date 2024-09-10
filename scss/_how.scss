@@ -1,0 +1,114 @@
+.how-section {
+   background-color: white;
+}
+
+.how-text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 150px;
+}
+
+.how-title {
+   margin-top: 55px;
+   margin-bottom: 16px;
+   color: $black;
+   font-family: Thunder;
+   font-size: 32px;
+   font-weight: 700;
+}
+
+.how-subtitle {
+   margin: 0 30px 40px 30px;
+   text-align: center;
+   color: $black;
+   font-family: Manrope;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.how-container {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 230px;
+   position: relative;
+
+   // Modifier for left-aligned content
+   &.left-aligned .how-info {
+      text-align: left;
+   }
+
+   // Modifier for right-aligned content
+   &.right-aligned .how-info {
+      text-align: right;
+
+      svg {
+         left: unset;
+         right: 0; // Aligns the SVG to the right
+      }
+
+      h1 {
+         margin-left: unset;
+         margin-right: 16px; // Adjusts the title margin
+      }
+
+      img {
+         margin: 0 16px;
+      }
+   }
+
+   // Modifier for orange text
+   &.orange-text h1 {
+      color: $orange;
+   }
+
+   &.lightblue-text h1 {
+      color: $light-blue;
+   }
+
+   &.small-bottom-margin {
+      margin-bottom: 80px;
+   }
+}
+
+.how-info {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+
+   svg {
+      position: absolute;
+      top: -140px;
+      left: 0;
+   }
+
+   h1,
+   p {
+      position: relative;
+   }
+
+   h1 {
+      color: $dark-blue;
+      font-family: Thunder;
+      font-size: 64px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 100%;
+      margin: 0;
+      margin-left: 16px;
+   }
+
+   p {
+      color: $black;
+      font-family: Manrope;
+      font-size: 16px;
+      margin: 0px 16px 16px 16px;
+      font-weight: 400;
+   }
+}
+
+.how-container img {
+   margin: 0 16px;
+   z-index: 1;
+}

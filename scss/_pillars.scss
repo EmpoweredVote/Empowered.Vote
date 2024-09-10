@@ -1,0 +1,131 @@
+.pillar-title-container {
+   padding: 40px 0px;
+   text-align: center;
+   color: $black;
+}
+
+.pillar-title-container h1 {
+   margin: 0px 40px 16px 40px;
+
+   font-family: Thunder;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+
+.pillar-title-container p {
+   margin: 0px 50px;
+
+   font-family: Manrope;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+
+.pillar-carousel {
+   display: flex;
+   flex-direction: row;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+   gap: 16px;
+   padding-left: 16px;
+   margin: 0 16px 24px 16px;
+}
+
+.pillar-card {
+   min-width: calc(100% - 40px);
+   scroll-snap-align: center;
+   background-color: $sandy;
+   position: relative;
+
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+
+   height: 400px;
+   width: 340px;
+   padding: 24px;
+   border-radius: 16px;
+}
+
+.pillar-carousel::-webkit-scrollbar {
+   display: none; // Hide scrollbar for better appearance
+}
+
+.pillar-card svg {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}
+
+.pillar-card:nth-of-type(2) {
+   height: 400px; // Match the height of the other cards
+}
+
+.pillar-card:nth-of-type(2) svg {
+   height: auto;
+   width: auto;
+}
+
+.pillar-text-container {
+   display: flex;
+   flex-direction: column;
+   z-index: 1;
+}
+
+.pillar-text-container h1 {
+   color: $dark-blue;
+
+   font-family: Thunder;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   margin: 0px 0px 8px 0px;
+}
+
+.pillar-text-container p {
+   color: $black;
+
+   font-family: Manrope;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin: 0px;
+}
+
+#inform-pillar {
+   height: 575px;
+   width: 140px;
+}
+
+.arrow-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+   margin-bottom: 80px;
+}
+
+.arrow {
+   display: flex;
+   width: 40px;
+   height: 40px;
+   padding: 8px;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+
+   background-color: $orange;
+   border-radius: 20px;
+   border: none;
+}
+
+.arrow:disabled {
+   background-color: lighten($orange, 20%);
+   cursor: not-allowed;
+}
