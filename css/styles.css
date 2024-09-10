@@ -362,6 +362,9 @@ nav {
 .how-container img {
   margin: 0 16px;
   z-index: 1;
+  border-radius: 16px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .pillar-title-container {
