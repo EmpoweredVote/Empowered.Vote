@@ -1,0 +1,132 @@
+/* Initial Menu State (Inactive) */
+.menu {
+   position: fixed;
+   top: 65px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 36px; /* Initial width matching the button */
+   height: 14px; /* Initial height matching the button */
+   padding: 0;
+   display: none; /* Hidden by default */
+   justify-content: flex-end;
+   align-items: flex-start;
+   background: white;
+   border-radius: 10px;
+   border: 1px solid #ff5740;
+   transition: all 0.3s ease-out;
+   z-index: 99;
+}
+
+/* Menu Active State */
+.menu.active {
+   display: flex;
+   flex-direction: column;
+   width: calc(100vw - 65px);
+   height: calc(100vh - 130px);
+   padding: 16px;
+   gap: 4px;
+   justify-content: space-between;
+   border-radius: 10px;
+   background: white;
+   flex-shrink: 0;
+   transition: all 0.3s ease-out;
+   left: 16px;
+   right: 16px;
+   top: 16px;
+   transform: none;
+   z-index: 1;
+}
+
+/* Fix the buttons to the top of the menu when active */
+.menu.active .nav-btn-container {
+   position: fixed;
+   top: 16px;
+   right: 16px;
+   z-index: 101;
+}
+
+.menu-items {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   margin-top: 100px;
+}
+
+.menu-items h1 {
+   color: $dark-blue;
+   font-family: Thunder;
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   text-transform: uppercase;
+   margin: 0;
+}
+
+.email-block {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 32px;
+}
+
+.email-block h3 {
+   color: $dark-blue;
+   font-family: Thunder;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   text-transform: uppercase;
+   margin: 0;
+   margin-bottom: 16px;
+}
+
+.email-block p {
+   color: $dark-blue;
+   font-family: Manrope;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin: 0;
+}
+
+.social-links {
+   color: $dark-blue;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 16px;
+}
+
+.social-links h3 {
+   font-family: Thunder;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   text-transform: uppercase;
+   margin: 0;
+}
+
+.social-links p {
+   font-family: Manrope;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin: 0;
+}
+
+/* Fix the buttons to the top of the screen when active */
+.fixed {
+   position: fixed;
+   top: 28px;
+   right: 25px;
+   z-index: 101;
+}
+
+.blurred {
+   filter: blur(10px);
+   //    transition: filter 0.3s ease-in-out;
+}
