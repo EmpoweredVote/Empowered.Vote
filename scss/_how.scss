@@ -29,8 +29,6 @@
 }
 
 .how-container {
-   display: flex;
-   flex-direction: column;
    margin-bottom: 230px;
    position: relative;
 
@@ -46,6 +44,8 @@
       svg {
          left: unset;
          right: 0; // Aligns the SVG to the right
+         height: 288px;
+         width: auto;
       }
 
       h1 {
@@ -55,6 +55,10 @@
 
       img {
          margin: 0 16px;
+      }
+
+      p {
+         margin: 0px 16px 16px 50px;
       }
    }
 
@@ -81,6 +85,8 @@
       position: absolute;
       top: -140px;
       left: 0;
+      height: 288px;
+      width: auto;
    }
 
    h1,
@@ -109,9 +115,117 @@
 }
 
 .how-container img {
-   margin: 0 16px;
+   margin: 0;
    z-index: 1;
    border-radius: 16px;
-   height: 300px;
+   width: 100%;
+   height: auto;
    object-fit: cover;
+}
+
+.image-wrapper {
+   position: relative;
+   display: block; /* Ensure it's a block-level element */
+   margin: 0 auto;
+   overflow: hidden;
+   margin: 0 16px;
+   border-radius: 16px;
+   aspect-ratio: 3 / 2; /* For a 3:2 aspect ratio */
+   max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+.image-wrapper img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   border-radius: 16px; /* Apply border-radius here if needed */
+}
+
+@media (min-width: 1024px) {
+   .how-container {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 50px; /* Adjusted gap for better scaling */
+   }
+
+   .how-container img {
+      max-width: 590px;
+      width: 100%;
+      margin: 0 32px;
+      object-fit: cover;
+   }
+
+   .image-wrapper {
+      max-width: 590px;
+      margin: 0 32px;
+      aspect-ratio: 3 / 2;
+   }
+
+   .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   .how-title {
+      font-size: 64px;
+   }
+
+   .how-subtitle {
+      width: 550px;
+   }
+
+   .how-info {
+      max-width: 640px;
+      margin-left: 50px; /* Reduced margin for better scaling */
+      h1 {
+         font-size: 100px; /* Adjust font size for scalability */
+         width: 100%;
+      }
+
+      p {
+         width: 100%;
+         max-width: 405px;
+      }
+
+      svg {
+         position: absolute;
+         left: -15%;
+         top: -200px;
+         height: 590px;
+         width: auto;
+      }
+   }
+
+   .how-container .how-info,
+   .how-container .image-wrapper {
+      flex: 1 1 50%;
+   }
+
+   /* Adjustments for the right-aligned container */
+   .how-container.right-aligned {
+      flex-direction: row-reverse;
+      // gap: 0;
+   }
+   .how-container.right-aligned .how-info {
+      margin-left: 0;
+      margin-right: 50px; /* Adjusted for symmetry */
+   }
+
+   .how-container.right-aligned .how-info svg {
+      height: 590px;
+      width: auto;
+      right: -7%;
+   }
+
+   .how-container.right-aligned .how-info p {
+      text-align: left;
+      margin: 0px 16px 16px 16px;
+   }
+
+   .how-container.right-aligned .how-info h1 {
+      text-align: left;
+   }
 }

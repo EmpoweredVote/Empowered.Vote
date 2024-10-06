@@ -2,7 +2,7 @@ nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   width: 340px;
+   width: 75vw;
 }
 
 .logo {
@@ -20,4 +20,11 @@ nav {
    gap: 4px;
    flex-shrink: 0;
    z-index: 100; /* Higher z-index to stay on top of the menu */
+}
+
+@media (min-width: 1024px) {
+   nav {
+      width: 90vw;
+      margin-top: 12px;
+   }
 }

@@ -1,12 +1,12 @@
 document.getElementById('hamburger-menu-btn').addEventListener('click', () => {
    const menu = document.getElementById('menu');
-   const contentWrapper = document.getElementById('content-wrapper');
+   const blurOverlay = document.getElementById('blur-overlay');
    const navBtnContainer = document.querySelector('.nav-btn-container');
 
    if (menu.classList.contains('active')) {
       // Close menu
       menu.classList.remove('active');
-      contentWrapper.classList.remove('blurred');
+      blurOverlay.classList.remove('active');
       navBtnContainer.classList.remove('fixed'); // Remove fixed position
 
       // Animate the X back to a hamburger
@@ -24,7 +24,7 @@ document.getElementById('hamburger-menu-btn').addEventListener('click', () => {
    } else {
       // Open menu
       menu.classList.add('active');
-      contentWrapper.classList.add('blurred');
+      blurOverlay.classList.add('active');
       navBtnContainer.classList.add('fixed'); // Fix the position of buttons
 
       // Animate hamburger to X

@@ -9,7 +9,9 @@
 @import 'cta';
 @import 'footer';
 @import 'menu';
+@import '404';
 
 body {
    margin: 0;
+   isolation: isolate;
 }

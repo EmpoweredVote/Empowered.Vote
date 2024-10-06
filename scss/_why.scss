@@ -55,3 +55,18 @@
 .number-icon {
    margin-bottom: 16px;
 }
+
+@media (min-width: 1024px) {
+   .why-title {
+      font-size: 64px;
+   }
+
+   .why-subtitle {
+      font-size: 16px;
+   }
+
+   .scroll-text {
+      width: 1000px;
+      font-size: 64px;
+   }
+}

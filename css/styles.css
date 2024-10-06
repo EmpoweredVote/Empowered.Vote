@@ -50,7 +50,7 @@
 
 .hero-container {
   background: #00657c;
-  margin: 1em 1em 80px 1em;
+  margin: 16px 16px 80px 16px;
   border-radius: 1em;
   min-height: 600px;
   padding-top: 12px;
@@ -96,11 +96,26 @@
   width: 100%;
 }
 
+@media (min-width: 1024px) {
+  .hero-container {
+    margin: 32px 32px 80px 32px;
+  }
+  .title {
+    font-size: 10vw;
+    margin: 140px 24px 0px;
+  }
+  .subtitle {
+    font-size: 5vw;
+  }
+  .crowd {
+    height: 300px;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 340px;
+  width: 75vw;
 }
 
 .logo {
@@ -120,8 +135,18 @@ nav {
   z-index: 100; /* Higher z-index to stay on top of the menu */
 }
 
+@media (min-width: 1024px) {
+  nav {
+    width: 90vw;
+    margin-top: 12px;
+  }
+}
 .card-section {
   margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-container h1 {
@@ -141,6 +166,9 @@ nav {
   font-weight: 400;
   text-align: center;
   margin-bottom: 40px;
+  max-width: 550px;
+  margin-inline: auto;
+  margin-bottom: 60px;
 }
 
 .card {
@@ -150,7 +178,7 @@ nav {
   text-align: center;
   background-color: #ecece2;
   padding: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   max-width: 448px;
 }
 
@@ -195,17 +223,10 @@ nav {
 
 .card:nth-child(3) .image-container {
   background-color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  overflow: visible;
 }
 
 .card:nth-child(4) .image-container {
   background-color: #00657c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #megaphone {
@@ -213,6 +234,34 @@ nav {
   top: -45px;
 }
 
+#buildings {
+  position: relative;
+  top: -13px;
+}
+
+#ballot {
+  position: relative;
+  top: -38px;
+}
+
+@media (min-width: 1024px) {
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+  }
+  .card {
+    width: 400px;
+    height: 385px;
+  }
+  .image-container {
+    margin-top: auto;
+  }
+  .card-section {
+    display: block;
+  }
+}
 .why-section {
   background-color: #ecece2;
 }
@@ -268,6 +317,18 @@ nav {
   margin-bottom: 16px;
 }
 
+@media (min-width: 1024px) {
+  .why-title {
+    font-size: 64px;
+  }
+  .why-subtitle {
+    font-size: 16px;
+  }
+  .scroll-text {
+    width: 1000px;
+    font-size: 64px;
+  }
+}
 .how-section {
   background-color: white;
 }
@@ -299,8 +360,6 @@ nav {
 }
 
 .how-container {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 230px;
   position: relative;
 }
@@ -313,6 +372,8 @@ nav {
 .how-container.right-aligned .how-info svg {
   left: unset;
   right: 0;
+  height: 288px;
+  width: auto;
 }
 .how-container.right-aligned .how-info h1 {
   margin-left: unset;
@@ -320,6 +381,9 @@ nav {
 }
 .how-container.right-aligned .how-info img {
   margin: 0 16px;
+}
+.how-container.right-aligned .how-info p {
+  margin: 0px 16px 16px 50px;
 }
 .how-container.orange-text h1 {
   color: #ff5740;
@@ -340,6 +404,8 @@ nav {
   position: absolute;
   top: -140px;
   left: 0;
+  height: 288px;
+  width: auto;
 }
 .how-info h1,
 .how-info p {
@@ -364,13 +430,106 @@ nav {
 }
 
 .how-container img {
-  margin: 0 16px;
+  margin: 0;
   z-index: 1;
   border-radius: 16px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
+.image-wrapper {
+  position: relative;
+  display: block; /* Ensure it's a block-level element */
+  margin: 0 auto;
+  overflow: hidden;
+  margin: 0 16px;
+  border-radius: 16px;
+  aspect-ratio: 3/2; /* For a 3:2 aspect ratio */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px; /* Apply border-radius here if needed */
+}
+
+@media (min-width: 1024px) {
+  .how-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px; /* Adjusted gap for better scaling */
+  }
+  .how-container img {
+    max-width: 590px;
+    width: 100%;
+    margin: 0 32px;
+    object-fit: cover;
+  }
+  .image-wrapper {
+    max-width: 590px;
+    margin: 0 32px;
+    aspect-ratio: 3/2;
+  }
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .how-title {
+    font-size: 64px;
+  }
+  .how-subtitle {
+    width: 550px;
+  }
+  .how-info {
+    max-width: 640px;
+    margin-left: 50px; /* Reduced margin for better scaling */
+  }
+  .how-info h1 {
+    font-size: 100px; /* Adjust font size for scalability */
+    width: 100%;
+  }
+  .how-info p {
+    width: 100%;
+    max-width: 405px;
+  }
+  .how-info svg {
+    position: absolute;
+    left: -15%;
+    top: -200px;
+    height: 590px;
+    width: auto;
+  }
+  .how-container .how-info,
+  .how-container .image-wrapper {
+    flex: 1 1 50%;
+  }
+  /* Adjustments for the right-aligned container */
+  .how-container.right-aligned {
+    flex-direction: row-reverse;
+  }
+  .how-container.right-aligned .how-info {
+    margin-left: 0;
+    margin-right: 50px; /* Adjusted for symmetry */
+  }
+  .how-container.right-aligned .how-info svg {
+    height: 590px;
+    width: auto;
+    right: -7%;
+  }
+  .how-container.right-aligned .how-info p {
+    text-align: left;
+    margin: 0px 16px 16px 16px;
+  }
+  .how-container.right-aligned .how-info h1 {
+    text-align: left;
+  }
+}
 .pillar-title-container {
   padding: 40px 0px;
   text-align: center;
@@ -773,7 +932,7 @@ nav {
   right: 16px;
   top: 16px;
   transform: none;
-  z-index: 1;
+  z-index: 99;
 }
 
 /* Fix the buttons to the top of the menu when active */
@@ -869,8 +1028,106 @@ nav {
   filter: blur(10px);
 }
 
+/* Blur Overlay */
+#blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 98; /* Below menu and buttons */
+  display: none; /* Hidden by default */
+}
+
+#blur-overlay.active {
+  display: block;
+}
+
+body {
+  background-color: white;
+}
+
+.content-container {
+  background-color: #00657c;
+  margin: 16px 16px;
+  border-radius: 16px;
+  padding: 12px;
+  height: 90vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 240px;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.error-container h1 {
+  color: white;
+  text-align: center;
+  font-family: Thunder;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.error-container p {
+  color: white;
+  text-align: center;
+  /* Body */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.watermark {
+  color: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-family: Thunder;
+  font-size: 280px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  position: absolute;
+  top: -55px;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+}
+
 body {
   margin: 0;
+  isolation: isolate;
 }
 
 /*# sourceMappingURL=styles.css.map */

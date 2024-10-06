@@ -1,5 +1,9 @@
 .card-section {
    margin: 1em;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .text-container h1 {
@@ -20,6 +24,9 @@
    font-weight: 400;
    text-align: center;
    margin-bottom: 40px;
+   max-width: 550px;
+   margin-inline: auto;
+   margin-bottom: 60px;
 }
 
 .card {
@@ -29,7 +36,7 @@
    text-align: center;
    background-color: $sandy;
    padding: 24px;
-   margin-bottom: 16px;
+   margin-bottom: 24px;
    max-width: 448px;
 }
 
@@ -74,20 +81,45 @@
 
 .card:nth-child(3) .image-container {
    background-color: white;
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   overflow: visible;
 }
 
 .card:nth-child(4) .image-container {
    background-color: $dark-blue;
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
 
 #megaphone {
    position: relative;
    top: -45px;
+}
+
+#buildings {
+   position: relative;
+   top: -13px;
+}
+
+#ballot {
+   position: relative;
+   top: -38px;
+}
+
+@media (min-width: 1024px) {
+   .cards-container {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: center;
+   }
+
+   .card {
+      width: 400px;
+      height: 385px;
+   }
+
+   .image-container {
+      margin-top: auto;
+   }
+
+   .card-section {
+      display: block;
+   }
 }

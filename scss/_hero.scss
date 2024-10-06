@@ -1,6 +1,6 @@
 .hero-container {
    background: $dark-blue;
-   margin: 1em 1em 80px 1em;
+   margin: 16px 16px 80px 16px;
    border-radius: 1em;
    min-height: 600px;
    padding-top: 12px;
@@ -44,4 +44,22 @@
 
 .crowd {
    width: 100%;
+}
+
+@media (min-width: 1024px) {
+   .hero-container {
+      margin: 32px 32px 80px 32px;
+   }
+   .title {
+      font-size: 10vw;
+      margin: 140px 24px 0px;
+   }
+
+   .subtitle {
+      font-size: 5vw;
+   }
+
+   .crowd {
+      height: 300px;
+   }
 }
