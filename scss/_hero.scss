@@ -44,11 +44,12 @@
 
 .crowd {
    width: 100%;
+   height: auto;
 }
 
 @media (min-width: 1024px) {
    .hero-container {
-      margin: 32px 32px 80px 32px;
+      margin: 1.5% 1.5% 5% 1.5%; /* top, right, bottom, left */
    }
    .title {
       font-size: 10vw;
@@ -59,7 +60,11 @@
       font-size: 5vw;
    }
 
+   .hero-text {
+      gap: 24px; /* Increased from 12px to 24px */
+   }
+
    .crowd {
-      height: 300px;
+      height: 40vh;
    }
 }

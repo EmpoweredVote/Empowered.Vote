@@ -2,29 +2,31 @@ nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   width: 75vw;
+   width: 95%;
+   margin: 0 auto; /* Center the nav bar */
+   padding: 16px 0; /* Add vertical padding */
 }
 
 .logo {
    width: 130px;
-   height: 30px;
+   height: auto;
 }
 
 .nav-btn-container {
    background-color: white;
    border-radius: 10px;
    display: flex;
-   width: 150px;
    padding: 4px;
    align-items: center;
    gap: 4px;
    flex-shrink: 0;
-   z-index: 100; /* Higher z-index to stay on top of the menu */
+   z-index: 100;
+   width: auto; /* Remove fixed width */
 }
 
 @media (min-width: 1024px) {
-   nav {
-      width: 90vw;
-      margin-top: 12px;
+   .logo {
+      width: 150px;
+      height: auto;
    }
 }

@@ -1,5 +1,6 @@
 .how-section {
    background-color: white;
+   margin-bottom: 300px;
 }
 
 .how-text-container {
@@ -146,6 +147,7 @@
    .how-container {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       flex-direction: row;
       gap: 50px; /* Adjusted gap for better scaling */
    }
@@ -153,20 +155,23 @@
    .how-container img {
       max-width: 590px;
       width: 100%;
-      margin: 0 32px;
       object-fit: cover;
    }
 
    .image-wrapper {
       max-width: 590px;
       margin: 0 32px;
-      aspect-ratio: 3 / 2;
+      aspect-ratio: 1 / 1;
    }
 
    .image-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+   }
+
+   .how-text-container {
+      margin-bottom: 100px;
    }
 
    .how-title {
@@ -207,7 +212,7 @@
    /* Adjustments for the right-aligned container */
    .how-container.right-aligned {
       flex-direction: row-reverse;
-      // gap: 0;
+      margin-left: 5vw;
    }
    .how-container.right-aligned .how-info {
       margin-left: 0;
@@ -227,5 +232,9 @@
 
    .how-container.right-aligned .how-info h1 {
       text-align: left;
+   }
+
+   .how-container.left-aligned {
+      margin-right: 5vw;
    }
 }

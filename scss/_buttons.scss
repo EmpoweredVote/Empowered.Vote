@@ -11,8 +11,9 @@
 .orange-btn {
    @include button-styles($orange, $font-color, 8px 24px, 8px);
    height: 40px;
-   width: 96px;
-   font-size: 20px;
+   width: auto; /* Change from fixed width to auto */
+   font-size: 16px; /* Adjust font size for mobile */
+   padding: 8px 16px;
    font-variation-settings: 'wght' 700, 'CNTR' 0;
 }
 
@@ -36,4 +37,12 @@
    border: none;
    cursor: pointer;
    z-index: 100;
+   margin-right: 10px;
+}
+
+@media (min-width: 1024px) {
+   .orange-btn {
+      font-size: 18px; /* Increase font size on larger screens */
+      padding: 12px 24px;
+   }
 }
