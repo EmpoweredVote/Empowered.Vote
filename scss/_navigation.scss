@@ -1,3 +1,4 @@
+/* Navbar Styles */
 nav {
    display: flex;
    justify-content: space-between;
@@ -5,6 +6,8 @@ nav {
    width: 95%;
    margin: 0 auto; /* Center the nav bar */
    padding: 16px 0; /* Add vertical padding */
+   position: relative;
+   z-index: 1000; /* Keep nav above other elements */
 }
 
 .logo {
@@ -20,13 +23,22 @@ nav {
    align-items: center;
    gap: 4px;
    flex-shrink: 0;
-   z-index: 100;
-   width: auto; /* Remove fixed width */
+   z-index: 1000;
+   width: auto;
+   position: relative; /* Default position */
 }
 
+/* Desktop Adjustments */
 @media (min-width: 1024px) {
    .logo {
       width: 150px;
       height: auto;
+   }
+
+   .nav-btn-container {
+      position: fixed;
+      top: 28px;
+      right: 25px;
+      z-index: 1000;
    }
 }

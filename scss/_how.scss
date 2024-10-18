@@ -1,6 +1,6 @@
 .how-section {
    background-color: white;
-   margin-bottom: 300px;
+   margin-bottom: 200px;
 }
 
 .how-text-container {
@@ -16,16 +16,16 @@
    margin-bottom: 16px;
    color: $black;
    font-family: Thunder;
-   font-size: 32px;
+   font-size: 48px;
    font-weight: 600;
 }
 
 .how-subtitle {
-   margin: 0 30px 40px 30px;
+   margin: 0 10px 40px 10px;
    text-align: center;
    color: $black;
    font-family: Manrope;
-   font-size: 16px;
+   font-size: 20px;
    font-weight: 400;
 }
 
@@ -109,7 +109,7 @@
    p {
       color: $black;
       font-family: Manrope;
-      font-size: 16px;
+      font-size: 24px;
       margin: 0px 16px 16px 16px;
       font-weight: 400;
    }
@@ -179,7 +179,8 @@
    }
 
    .how-subtitle {
-      width: 550px;
+      width: 800px;
+      font-size: 24px;
    }
 
    .how-info {

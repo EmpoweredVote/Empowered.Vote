@@ -25,9 +25,6 @@
    line-height: normal;
 }
 
-.footer-title-text {
-}
-
 .newsletter {
    display: flex;
    flex-direction: column;
@@ -197,4 +194,103 @@
    font-weight: 400;
    line-height: normal;
    flex: 1 0 0;
+}
+
+@media (min-width: 1024px) {
+   .footer {
+      padding: 48px 32px 24px 32px;
+   }
+
+   .desktop-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+   .left-container {
+      display: flex;
+      flex-direction: column;
+      gap: 55px;
+   }
+
+   .footer-body-text {
+      font-size: 18px;
+   }
+
+   .company-info svg {
+      width: 100%;
+      height: auto;
+   }
+
+   .newsletter-form input {
+      width: 450px;
+   }
+
+   .newsletter {
+      display: none;
+   }
+
+   .footer-body-text {
+      display: none;
+   }
+
+   .right-container {
+      display: flex;
+      gap: 95px;
+   }
+
+   .column-container {
+      order: 3;
+      gap: 95px;
+   }
+
+   .policies h3 {
+      font-family: Thunder;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+      color: white;
+      letter-spacing: 0.03em;
+   }
+
+   .policies {
+      line-height: normal;
+   }
+
+   .find-yourself h3 {
+      font-size: 24px;
+   }
+
+   .find-yourself p {
+      font-size: 18px;
+   }
+
+   .stay-connected {
+      order: 1;
+   }
+
+   .stay-connected h3 {
+      font-size: 24px;
+   }
+
+   .stay-connected p {
+      font-size: 18px;
+   }
+
+   .email {
+      order: 2;
+   }
+
+   .email h3 {
+      font-size: 24px;
+   }
+
+   .email p {
+      font-size: 18px;
+   }
+
+   .footnote {
+      font-size: 18px;
+   }
 }

@@ -1,3 +1,8 @@
+:root {
+   --active-width: 55%;
+   --inactive-width: 22.5%; /* (100% - 55%) / (2 inactive pillars) */
+}
+
 .pillar-title-container {
    padding: 40px 0px;
    text-align: center;
@@ -8,7 +13,7 @@
    margin: 0px 40px 16px 40px;
 
    font-family: Thunder;
-   font-size: 32px;
+   font-size: 48px;
    font-style: normal;
    font-weight: 700;
    line-height: normal;
@@ -18,7 +23,7 @@
    margin: 0px 50px;
 
    font-family: Manrope;
-   font-size: 16px;
+   font-size: 22px;
    font-style: normal;
    font-weight: 400;
    line-height: normal;
@@ -28,6 +33,7 @@
    display: flex;
    flex-direction: row;
    overflow-x: auto;
+   overflow-y: hidden;
    scroll-snap-type: x mandatory;
    gap: 16px;
    padding-left: 16px;
@@ -35,7 +41,7 @@
 }
 
 .pillar-card {
-   min-width: calc(100% - 40px);
+   flex: 0 0 calc(100% - 40px);
    scroll-snap-align: center;
    background-color: $sandy;
    position: relative;
@@ -57,8 +63,11 @@
 
 .pillar-card svg {
    position: absolute;
+   top: 10%;
    bottom: 0;
    right: 0;
+   width: 50%;
+   height: auto;
 }
 
 .pillar-card:nth-of-type(2) {
@@ -67,7 +76,6 @@
 
 .pillar-card:nth-of-type(2) svg {
    height: auto;
-   width: auto;
 }
 
 .pillar-text-container {
@@ -81,7 +89,7 @@
    color: $dark-blue;
 
    font-family: Thunder;
-   font-size: 32px;
+   font-size: 48px;
    font-style: normal;
    font-weight: 700;
    line-height: normal;
@@ -92,7 +100,7 @@
    color: $black;
 
    font-family: Manrope;
-   font-size: 16px;
+   font-size: 20px;
    font-style: normal;
    font-weight: 400;
    line-height: normal;
@@ -131,51 +139,77 @@
    cursor: not-allowed;
 }
 
+/* Desktop Styles */
 @media (min-width: 1024px) {
-   .pillar-carousel {
-      overflow-y: hidden;
-      align-items: flex-end;
+   .pillar-title-container p {
+      font-size: 24px;
    }
 
-   .pillar-text-container h1 {
-      font-size: 4em;
-   }
-
-   .pillar-card:nth-of-type(1) {
-      max-width: 800px;
-      min-width: 45vw;
-      height: auto;
-      aspect-ratio: 1.3 / 1;
-      overflow-y: hidden;
-   }
-
-   .pillar-card:nth-of-type(2) {
-      max-width: 500px;
-      min-width: 25vw;
-      height: auto;
-      aspect-ratio: 1 / 1.25;
-      overflow-y: hidden;
-   }
-
-   .pillar-card:nth-of-type(2) svg {
-      position: absolute;
-      top: 35px;
-      right: 0;
-      bottom: 0;
-      width: 40%;
-      height: 100%;
-   }
-
-   .pillar-card svg {
-      position: absolute;
-      top: 35px;
-      right: 0;
-      bottom: 0;
-      width: 40%;
-      height: auto;
+   .pillar-text-container {
+      position: relative;
    }
 
    .pillar-text-container p {
-      max-width: 100%;
+      max-width: 60%;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      margin: 0;
+   }
+
+   .pillar-card.active p {
+      display: block;
+      font-size: 20px;
+   }
+
+   .pillar-text-container h1 {
+      font-size: 3.5em;
+      position: relative;
+      margin: 0 0 8px 0;
+   }
+
+   .pillar-carousel {
+      overflow-x: hidden;
+      align-items: flex-end;
+      height: 600px;
+      flex-wrap: nowrap; /* Ensure items don't wrap */
+   }
+
+   .pillar-title-container h1 {
+      font-size: 64px;
+   }
+
+   .pillar-card {
+      min-width: 0;
+      flex: 0 0 auto;
+      width: var(--inactive-width); /* Default width for inactive pillars */
+      overflow-y: hidden;
+      position: relative;
+   }
+
+   .pillar-card.active {
+      width: var(--active-width); /* Width when active */
+   }
+
+   /* Set specific widths for each card */
+   .pillar-card:nth-of-type(1) {
+      height: 100%;
+   }
+
+   .pillar-card:nth-of-type(2) {
+      height: 85%;
+   }
+
+   .pillar-card:nth-of-type(3) {
+      height: 70%;
+   }
+
+   /* Adjust SVG positioning */
+   .pillar-card svg {
+      position: absolute;
+      top: 20%;
+      right: 0;
+      bottom: 0;
+      transform-origin: bottom center;
    }
 }

@@ -93,7 +93,7 @@
 }
 
 .subtitle {
-  font-size: 32px;
+  font-size: 48px;
   font-style: italic;
   font-weight: 500;
   line-height: 100%;
@@ -123,6 +123,7 @@
     height: 40vh;
   }
 }
+/* Navbar Styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -130,6 +131,8 @@ nav {
   width: 95%;
   margin: 0 auto; /* Center the nav bar */
   padding: 16px 0; /* Add vertical padding */
+  position: relative;
+  z-index: 1000; /* Keep nav above other elements */
 }
 
 .logo {
@@ -145,14 +148,22 @@ nav {
   align-items: center;
   gap: 4px;
   flex-shrink: 0;
-  z-index: 100;
-  width: auto; /* Remove fixed width */
+  z-index: 1000;
+  width: auto;
+  position: relative; /* Default position */
 }
 
+/* Desktop Adjustments */
 @media (min-width: 1024px) {
   .logo {
     width: 150px;
     height: auto;
+  }
+  .nav-btn-container {
+    position: fixed;
+    top: 28px;
+    right: 25px;
+    z-index: 1000;
   }
 }
 .card-section {
@@ -167,7 +178,7 @@ nav {
   text-align: center;
   color: #1c1c1c;
   font-family: Thunder;
-  font-size: 32px;
+  font-size: 48px;
   font-variation-settings: "wght" 700, "CNTR" 0;
   line-height: normal;
   letter-spacing: 0.03em;
@@ -175,7 +186,7 @@ nav {
 
 .text-container p {
   font-family: Manrope;
-  font-size: 1em;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -191,7 +202,7 @@ nav {
   text-align: center;
   background-color: #ecece2;
   padding: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   max-width: 448px;
 }
 
@@ -207,7 +218,7 @@ nav {
 
 .card-text {
   font-family: Manrope;
-  font-size: 1em;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -264,22 +275,27 @@ nav {
   }
   .text-container p {
     margin-bottom: 80px;
+    font-size: 24px;
   }
   .cards-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 120px;
+    gap: 8px;
   }
   .card {
     width: 400px;
-    height: 385px;
+    height: auto;
   }
   .image-container {
     margin-top: auto;
   }
   .card-section {
     display: block;
+  }
+  .card-text {
+    font-size: 20px;
   }
 }
 .why-section {
@@ -298,7 +314,7 @@ nav {
   margin-top: 40px;
   margin-bottom: 16px;
   font-family: Thunder;
-  font-size: 32px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -308,7 +324,7 @@ nav {
   margin: 0px 70px 40px 70px;
   text-align: center;
   font-family: Manrope;
-  font-size: 16px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -325,7 +341,7 @@ nav {
 .scroll-text {
   text-align: center;
   font-family: Thunder;
-  font-size: 32px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
@@ -342,7 +358,7 @@ nav {
     font-size: 64px;
   }
   .why-subtitle {
-    font-size: 16px;
+    font-size: 24px;
   }
   .scroll-text {
     width: 1000px;
@@ -351,7 +367,7 @@ nav {
 }
 .how-section {
   background-color: white;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 }
 
 .how-text-container {
@@ -367,16 +383,16 @@ nav {
   margin-bottom: 16px;
   color: #1c1c1c;
   font-family: Thunder;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 600;
 }
 
 .how-subtitle {
-  margin: 0 30px 40px 30px;
+  margin: 0 10px 40px 10px;
   text-align: center;
   color: #1c1c1c;
   font-family: Manrope;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -445,7 +461,7 @@ nav {
 .how-info p {
   color: #1c1c1c;
   font-family: Manrope;
-  font-size: 16px;
+  font-size: 24px;
   margin: 0px 16px 16px 16px;
   font-weight: 400;
 }
@@ -508,7 +524,8 @@ nav {
     font-size: 64px;
   }
   .how-subtitle {
-    width: 550px;
+    width: 800px;
+    font-size: 24px;
   }
   .how-info {
     max-width: 640px;
@@ -558,6 +575,11 @@ nav {
     margin-right: 5vw;
   }
 }
+:root {
+  --active-width: 55%;
+  --inactive-width: 22.5%; /* (100% - 55%) / (2 inactive pillars) */
+}
+
 .pillar-title-container {
   padding: 40px 0px;
   text-align: center;
@@ -567,7 +589,7 @@ nav {
 .pillar-title-container h1 {
   margin: 0px 40px 16px 40px;
   font-family: Thunder;
-  font-size: 32px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -576,7 +598,7 @@ nav {
 .pillar-title-container p {
   margin: 0px 50px;
   font-family: Manrope;
-  font-size: 16px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -586,6 +608,7 @@ nav {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 16px;
   padding-left: 16px;
@@ -593,7 +616,7 @@ nav {
 }
 
 .pillar-card {
-  min-width: calc(100% - 40px);
+  flex: 0 0 calc(100% - 40px);
   scroll-snap-align: center;
   background-color: #ecece2;
   position: relative;
@@ -613,8 +636,11 @@ nav {
 
 .pillar-card svg {
   position: absolute;
+  top: 10%;
   bottom: 0;
   right: 0;
+  width: 50%;
+  height: auto;
 }
 
 .pillar-card:nth-of-type(2) {
@@ -623,7 +649,6 @@ nav {
 
 .pillar-card:nth-of-type(2) svg {
   height: auto;
-  width: auto;
 }
 
 .pillar-text-container {
@@ -636,7 +661,7 @@ nav {
 .pillar-text-container h1 {
   color: #00657c;
   font-family: Thunder;
-  font-size: 32px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -646,7 +671,7 @@ nav {
 .pillar-text-container p {
   color: #1c1c1c;
   font-family: Manrope;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -684,46 +709,66 @@ nav {
   cursor: not-allowed;
 }
 
+/* Desktop Styles */
 @media (min-width: 1024px) {
-  .pillar-carousel {
-    overflow-y: hidden;
-    align-items: flex-end;
+  .pillar-title-container p {
+    font-size: 24px;
   }
-  .pillar-text-container h1 {
-    font-size: 4em;
-  }
-  .pillar-card:nth-of-type(1) {
-    max-width: 800px;
-    min-width: 45vw;
-    height: auto;
-    aspect-ratio: 1.3/1;
-    overflow-y: hidden;
-  }
-  .pillar-card:nth-of-type(2) {
-    max-width: 500px;
-    min-width: 25vw;
-    height: auto;
-    aspect-ratio: 1/1.25;
-    overflow-y: hidden;
-  }
-  .pillar-card:nth-of-type(2) svg {
-    position: absolute;
-    top: 35px;
-    right: 0;
-    bottom: 0;
-    width: 40%;
-    height: 100%;
-  }
-  .pillar-card svg {
-    position: absolute;
-    top: 35px;
-    right: 0;
-    bottom: 0;
-    width: 40%;
-    height: auto;
+  .pillar-text-container {
+    position: relative;
   }
   .pillar-text-container p {
-    max-width: 100%;
+    max-width: 60%;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+  }
+  .pillar-card.active p {
+    display: block;
+    font-size: 20px;
+  }
+  .pillar-text-container h1 {
+    font-size: 3.5em;
+    position: relative;
+    margin: 0 0 8px 0;
+  }
+  .pillar-carousel {
+    overflow-x: hidden;
+    align-items: flex-end;
+    height: 600px;
+    flex-wrap: nowrap; /* Ensure items don't wrap */
+  }
+  .pillar-title-container h1 {
+    font-size: 64px;
+  }
+  .pillar-card {
+    min-width: 0;
+    flex: 0 0 auto;
+    width: var(--inactive-width); /* Default width for inactive pillars */
+    overflow-y: hidden;
+    position: relative;
+  }
+  .pillar-card.active {
+    width: var(--active-width); /* Width when active */
+  }
+  /* Set specific widths for each card */
+  .pillar-card:nth-of-type(1) {
+    height: 100%;
+  }
+  .pillar-card:nth-of-type(2) {
+    height: 85%;
+  }
+  .pillar-card:nth-of-type(3) {
+    height: 70%;
+  }
+  /* Adjust SVG positioning */
+  .pillar-card svg {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom center;
   }
 }
 .cta-card {
@@ -733,10 +778,8 @@ nav {
   align-items: center;
   background-color: #ecece2;
   height: 500px;
-  width: 360px;
   padding: 24px;
-  box-sizing: border-box;
-  margin-left: 15px;
+  margin-inline: 16px;
   border-radius: 16px;
   position: relative;
   margin-bottom: 100px;
@@ -758,7 +801,7 @@ nav {
   color: #1c1c1c;
   text-align: center;
   font-family: Manrope;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -768,8 +811,27 @@ nav {
 
 .cta-card svg {
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
+@media (min-width: 1024px) {
+  .cta-card {
+    width: calc(100% - 64px);
+    height: 420px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-inline: 32px;
+  }
+  .cta-card svg {
+    width: 100%;
+  }
+  .cta-card p {
+    max-width: 450px;
+    margin-top: 0;
+    font-size: 24px;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -967,12 +1029,92 @@ nav {
   flex: 1 0 0;
 }
 
-/* Initial Menu State (Inactive) */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 48px 32px 24px 32px;
+  }
+  .desktop-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+  }
+  .footer-body-text {
+    font-size: 18px;
+  }
+  .company-info svg {
+    width: 100%;
+    height: auto;
+  }
+  .newsletter-form input {
+    width: 450px;
+  }
+  .newsletter {
+    display: none;
+  }
+  .footer-body-text {
+    display: none;
+  }
+  .right-container {
+    display: flex;
+    gap: 95px;
+  }
+  .column-container {
+    order: 3;
+    gap: 95px;
+  }
+  .policies h3 {
+    font-family: Thunder;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.03em;
+  }
+  .policies {
+    line-height: normal;
+  }
+  .find-yourself h3 {
+    font-size: 24px;
+  }
+  .find-yourself p {
+    font-size: 18px;
+  }
+  .stay-connected {
+    order: 1;
+  }
+  .stay-connected h3 {
+    font-size: 24px;
+  }
+  .stay-connected p {
+    font-size: 18px;
+  }
+  .email {
+    order: 2;
+  }
+  .email h3 {
+    font-size: 24px;
+  }
+  .email p {
+    font-size: 18px;
+  }
+  .footnote {
+    font-size: 18px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
 .menu {
-  position: fixed;
-  top: 65px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 36px; /* Initial width matching the button */
   height: 14px; /* Initial height matching the button */
   padding: 0;
@@ -983,6 +1125,7 @@ nav {
   border-radius: 10px;
   border: 1px solid #ff5740;
   transition: all 0.3s ease-out;
+  transform-origin: top right;
   z-index: 99;
 }
 
@@ -990,27 +1133,20 @@ nav {
 .menu.active {
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 65px);
-  height: calc(100vh - 130px);
-  padding: 16px;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 400px);
+  padding: 24px;
   gap: 4px;
   justify-content: space-between;
   border-radius: 10px;
   background: white;
   flex-shrink: 0;
-  transition: all 0.3s ease-out;
-  left: 16px;
-  right: 16px;
-  top: 16px;
+  /* We'll set 'top' and 'right' via JavaScript */
   transform: none;
   z-index: 99;
 }
 
-/* Fix the buttons to the top of the menu when active */
 .menu.active .nav-btn-container {
-  position: fixed;
-  top: 16px;
-  right: 16px;
   z-index: 101;
 }
 
@@ -1018,7 +1154,8 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 100px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .menu-items h1 {
@@ -1026,10 +1163,19 @@ nav {
   font-family: Thunder;
   font-size: 40px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
   margin: 0;
+}
+
+.menu-items a {
+  text-decoration: none;
+}
+
+.menu-items a:visited {
+  color: #00657c;
+  text-decoration: none;
 }
 
 .email-block {
@@ -1109,7 +1255,7 @@ nav {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 98; /* Below menu and buttons */
+  z-index: 100; /* Below menu and buttons */
   display: none; /* Hidden by default */
 }
 
@@ -1117,6 +1263,67 @@ nav {
   display: block;
 }
 
+@media (min-width: 1024px) {
+  .nav-btn-container {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 14px;
+    padding: 0;
+    overflow: hidden;
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease-out;
+    transform-origin: top right;
+    z-index: 999;
+  }
+  .menu.active {
+    width: 35vw;
+    height: 60vh;
+    border-radius: 10px;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #ff5740;
+    /* 'top' and 'right' set via JavaScript */
+  }
+  /* Keep nav-btn-container fixed when menu is active */
+  .menu.active .nav-btn-container {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  /* Adjust menu items spacing */
+  .menu-items {
+    gap: 16px;
+    margin-top: 70px;
+    margin-bottom: 32px;
+  }
+  .menu-items h1 {
+    font-size: 3.5vw;
+  }
+  .email-block h3 {
+    margin-bottom: 0;
+  }
+  .social-links {
+    gap: 8px;
+  }
+  .menu-content {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  .menu.active .menu-content {
+    opacity: 1;
+  }
+  /* Remove blur overlay on desktop */
+  #blur-overlay {
+    display: none;
+  }
+}
 body {
   background-color: white;
 }

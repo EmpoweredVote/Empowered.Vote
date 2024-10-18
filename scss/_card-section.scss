@@ -11,7 +11,7 @@
    color: #1c1c1c;
 
    font-family: Thunder;
-   font-size: 32px;
+   font-size: 48px;
    font-variation-settings: 'wght' 700, 'CNTR' 0;
    line-height: normal;
    letter-spacing: 0.03em;
@@ -19,7 +19,7 @@
 
 .text-container p {
    font-family: Manrope;
-   font-size: 1em;
+   font-size: 24px;
    font-style: normal;
    font-weight: 400;
    text-align: center;
@@ -35,7 +35,7 @@
    text-align: center;
    background-color: $sandy;
    padding: 24px;
-   margin-bottom: 24px;
+   margin-bottom: 32px;
    max-width: 448px;
 }
 
@@ -51,7 +51,7 @@
 
 .card-text {
    font-family: Manrope;
-   font-size: 1em;
+   font-size: 24px;
    font-style: normal;
    font-weight: 400;
    text-align: center;
@@ -109,6 +109,7 @@
 
    .text-container p {
       margin-bottom: 80px;
+      font-size: 24px;
    }
 
    .cards-container {
@@ -116,11 +117,12 @@
       flex-direction: row;
       justify-content: space-evenly;
       margin-bottom: 120px;
+      gap: 8px;
    }
 
    .card {
       width: 400px;
-      height: 385px;
+      height: auto;
    }
 
    .image-container {
@@ -129,5 +131,9 @@
 
    .card-section {
       display: block;
+   }
+
+   .card-text {
+      font-size: 20px;
    }
 }

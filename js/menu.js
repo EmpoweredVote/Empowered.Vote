@@ -1,13 +1,11 @@
-document.getElementById('hamburger-menu-btn').addEventListener('click', () => {
-   const menu = document.getElementById('menu');
-   const blurOverlay = document.getElementById('blur-overlay');
-   const navBtnContainer = document.querySelector('.nav-btn-container');
+const menu = document.getElementById('menu');
+const navBtnContainer = document.querySelector('.nav-btn-container');
+const blur = document.getElementById('blur-overlay');
 
+document.getElementById('hamburger-menu-btn').addEventListener('click', () => {
    if (menu.classList.contains('active')) {
-      // Close menu
       menu.classList.remove('active');
-      blurOverlay.classList.remove('active');
-      navBtnContainer.classList.remove('fixed'); // Remove fixed position
+      blur.classList.remove('active');
 
       // Animate the X back to a hamburger
       gsap.to('.flex-btn svg:nth-child(1)', {
@@ -24,8 +22,8 @@ document.getElementById('hamburger-menu-btn').addEventListener('click', () => {
    } else {
       // Open menu
       menu.classList.add('active');
-      blurOverlay.classList.add('active');
-      navBtnContainer.classList.add('fixed'); // Fix the position of buttons
+
+      blur.classList.add('active');
 
       // Animate hamburger to X
       gsap.to('.flex-btn svg:nth-child(1)', {
@@ -40,4 +38,27 @@ document.getElementById('hamburger-menu-btn').addEventListener('click', () => {
          duration: 0.3,
       });
    }
+});
+
+const menuLinks = document.querySelectorAll('.menu-items a');
+
+menuLinks.forEach((link) => {
+   link.addEventListener('click', () => {
+      // Remove 'active' class from menu and blur overlay
+      menu.classList.remove('active');
+      blur.classList.remove('active');
+
+      // Optionally, revert the hamburger menu animation
+      gsap.to('.flex-btn svg:nth-child(1)', {
+         rotation: 0,
+         y: 0,
+         duration: 0.3,
+      });
+      gsap.to('.flex-btn svg:nth-child(2)', { opacity: 1, duration: 0.3 });
+      gsap.to('.flex-btn svg:nth-child(3)', {
+         rotation: 0,
+         y: 0,
+         duration: 0.3,
+      });
+   });
 });
