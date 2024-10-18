@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
    const sections = document.querySelectorAll('.scroll-section');
 
    gsap.registerPlugin(ScrollTrigger);
@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const tl = gsap.timeline({
          scrollTrigger: {
             trigger: section,
-            start: 'top 25%',
+            start: 'top 15%',
             end: 'top 0%',
             toggleActions: 'play none none reverse',
+            immediateRender: false,
          },
       });
 

@@ -837,7 +837,7 @@ nav {
   flex-direction: column;
   width: 100%; /* or max-width: 360px; */
   padding: 48px 20px 20px 20px;
-  border-radius: 16px;
+  border-radius: 16px 16px 0 0;
   background-color: #00657c;
   box-sizing: border-box;
 }
@@ -1170,6 +1170,7 @@ html {
 }
 
 .menu-items a {
+  color: #00657c;
   text-decoration: none;
 }
 
