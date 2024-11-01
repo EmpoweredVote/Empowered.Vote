@@ -173,15 +173,16 @@ body {
    margin-bottom: 24px;
    display: flex;
    flex-direction: column;
-}
-
-.half-width {
    flex: 1;
 }
 
-.full-width {
-   width: 100%;
-}
+// .half-width {
+//    flex: 1;
+// }
+
+// .full-width {
+//    width: 100%;
+// }
 
 .form-group label {
    font-family: Manrope, sans-serif;
@@ -462,7 +463,21 @@ span {
    text-transform: uppercase;
 }
 
+#volunteer-form {
+   display: flex;
+   flex-direction: column;
+}
+
 @media (max-width: 1023px) {
+   .form-row {
+      flex-direction: column;
+   }
+
+   .form-group {
+      flex: none;
+      width: 100%;
+   }
+
    .suggested-contributions {
       flex-direction: column;
    }
