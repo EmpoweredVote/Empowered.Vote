@@ -1,42 +1,25 @@
 // forms.js
 
-function disableFormInputs(form) {
-   const inputs = form.querySelectorAll('input, select, textarea, button');
-   inputs.forEach((input) => (input.disabled = true));
-}
-
-function enableFormInputs(form) {
-   const inputs = form.querySelectorAll('input, select, textarea, button');
-   inputs.forEach((input) => (input.disabled = false));
-}
-
 // Function to handle button clicks
 function handleFormClick(event) {
+   // Get the id of the clicked button
    const clickedButtonId = event.currentTarget.id;
+
+   // Map button ids to corresponding menu ids
    const menuMap = {
       playtest: 'playtest-menu',
       volunteer: 'volunteer-menu',
       donate: 'donate-menu',
    };
 
+   // Hide the main menu
    const mainMenu = document.getElementById('main-menu');
    mainMenu.style.display = 'none';
-   disableFormInputs(mainMenu);
 
+   // Show the corresponding menu
    const menuIdToShow = menuMap[clickedButtonId];
    const menuToShow = document.getElementById(menuIdToShow);
-
    if (menuToShow) {
-      enableFormInputs(menuToShow);
-
-      const menus = document.querySelectorAll('.menu-container');
-      menus.forEach((menu) => {
-         if (menu !== menuToShow) {
-            menu.style.display = 'none';
-            disableFormInputs(menu);
-         }
-      });
-
       menuToShow.style.display = 'flex';
    } else {
       console.error('Menu not found for button:', clickedButtonId);
@@ -44,19 +27,20 @@ function handleFormClick(event) {
 }
 
 function goBack() {
+   // Hide all menus
    const menus = document.querySelectorAll('.menu-container');
    menus.forEach((menu) => {
       menu.style.display = 'none';
-      disableFormInputs(menu);
    });
 
+   // Show the main menu
    const mainMenu = document.getElementById('main-menu');
    mainMenu.style.display = 'flex';
-   enableFormInputs(mainMenu);
 
    const navBar = document.getElementById('form-nav');
    navBar.style.display = 'flex';
 
+   // Optionally, scroll to the top of the page
    window.scrollTo(0, 0);
 }
 
@@ -66,16 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
    divButtons.forEach((button) => {
       button.addEventListener('click', handleFormClick);
    });
-
-   const menus = document.querySelectorAll('.menu-container');
-   menus.forEach((menu) => {
-      if (menu.style.display === 'none' || menu.style.display === '') {
-         disableFormInputs(menu);
-      }
-   });
-
-   const mainMenu = document.getElementById('main-menu');
-   enableFormInputs(mainMenu);
 });
 
 // forms.js
