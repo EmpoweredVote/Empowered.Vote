@@ -19,6 +19,7 @@
   font-size: 16px; /* Adjust font size for mobile */
   padding: 8px 16px;
   font-variation-settings: "wght" 700, "CNTR" 0;
+  cursor: pointer;
 }
 
 .cta {
@@ -34,6 +35,7 @@
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  cursor: pointer;
 }
 
 .flex-btn {
@@ -87,13 +89,13 @@
 }
 
 .title {
-  font-size: 64px;
+  font-size: 48px;
   margin: 90px 24px 0px;
   font-variation-settings: "wght" 700, "CNTR" 0;
 }
 
 .subtitle {
-  font-size: 48px;
+  font-size: 64px;
   font-style: italic;
   font-weight: 500;
   line-height: 100%;
@@ -110,11 +112,11 @@
     margin: 1.5% 1.5% 5% 1.5%; /* top, right, bottom, left */
   }
   .title {
-    font-size: 10vw;
+    font-size: 5vw;
     margin: 140px 24px 0px;
   }
   .subtitle {
-    font-size: 5vw;
+    font-size: 10vw;
   }
   .hero-text {
     gap: 24px; /* Increased from 12px to 24px */
@@ -168,6 +170,7 @@ nav {
 }
 .card-section {
   margin: 1em;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -307,12 +310,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
 }
 
 .why-title {
-  margin-top: 40px;
-  margin-bottom: 16px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   font-family: Thunder;
   font-size: 48px;
   font-style: normal;
@@ -394,6 +396,7 @@ nav {
   font-family: Manrope;
   font-size: 20px;
   font-weight: 400;
+  max-width: 550px;
 }
 
 .how-container {
@@ -524,7 +527,7 @@ nav {
     font-size: 64px;
   }
   .how-subtitle {
-    width: 800px;
+    max-width: 550px;
     font-size: 24px;
   }
   .how-info {
@@ -801,7 +804,7 @@ nav {
   color: #1c1c1c;
   text-align: center;
   font-family: Manrope;
-  font-size: 24px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -827,7 +830,6 @@ nav {
     width: 100%;
   }
   .cta-card p {
-    max-width: 450px;
     margin-top: 0;
     font-size: 24px;
   }
@@ -848,6 +850,8 @@ nav {
 
 .company-info svg {
   margin-bottom: 24px;
+  width: 180px;
+  height: auto;
 }
 
 .footer-body-text {
@@ -1029,7 +1033,31 @@ nav {
   flex: 1 0 0;
 }
 
+.social-media-mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-media-desktop {
+  display: none;
+}
+
+#youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
 @media (min-width: 1024px) {
+  .social-media-mobile {
+    display: none;
+  }
   .footer {
     padding: 48px 32px 24px 32px;
   }
@@ -1047,7 +1075,7 @@ nav {
     font-size: 18px;
   }
   .company-info svg {
-    width: 100%;
+    width: 250px;
     height: auto;
   }
   .newsletter-form input {
@@ -1105,6 +1133,16 @@ nav {
   }
   .footnote {
     font-size: 18px;
+  }
+  .social-media-desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+  #youtube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 html {
@@ -1213,6 +1251,15 @@ html {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+}
+
+.social-links a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.social-links a:visited {
+  color: #00657c;
 }
 
 .social-links h3 {
@@ -1404,6 +1451,506 @@ body {
   backdrop-filter: blur(15px);
 }
 
+body {
+  box-sizing: border-box;
+}
+
+.body-container {
+  background-color: #00657c;
+  margin: 16px 16px;
+  border-radius: 16px;
+  padding: 12px 12px 32px 12px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forms-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background-color: #fff;
+  width: 820px;
+  height: 600px;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #ff5740;
+}
+
+.forms-header {
+  text-align: center;
+}
+
+.forms-header h1 {
+  color: var(--Black, #1c1c1c);
+  text-align: center;
+  /* Title */
+  font-family: Thunder;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.forms-header p {
+  color: var(--Black, #1c1c1c);
+  text-align: center;
+  /* Body */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#form-nav {
+  margin-bottom: 30px;
+}
+
+.form-buttons-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 8px;
+}
+
+.form-button {
+  display: flex;
+  padding: 24px;
+  flex-direction: row;
+  gap: 32px;
+  border-radius: 16px;
+  background-color: #ecece2;
+  color: #00657c;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #00657c;
+  color: #fff;
+}
+
+.form-button h2 {
+  font-family: Thunder;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.number {
+  display: flex;
+  width: 22px;
+  padding: 8px 11px 7px 11px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #00657c;
+  text-align: center;
+  font-family: Thunder;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Hide menus by default */
+.menu-container {
+  display: none;
+  position: relative;
+}
+
+/* Style for the back button */
+.back-button {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Adjust the SVG icon inside the button */
+.back-button svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: #1c1c1c; /* Adjust the color as needed */
+}
+
+/* Optional: Change the color on hover */
+.back-button:hover svg {
+  stroke: #ffa500; /* Change to your desired hover color */
+}
+
+/* Ensure the rest of the menu content is styled appropriately */
+.menu-container h2 {
+  margin-top: 64px; /* Add top margin to avoid overlapping with the back button */
+  font-family: Thunder;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.menu-container p {
+  font-family: Manrope;
+  font-size: 16px;
+}
+
+.form {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-bottom-color: #59b0c4; /* Adjust to your theme color */
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #ff5740;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: Thunder, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #d64936; /* Slightly darker on hover */
+}
+
+span {
+  font-family: Manrope, sans-serif;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.social-media p {
+  color: white;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.media-button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.media-button {
+  display: flex;
+  padding: 24px;
+  background-color: #ecece2;
+  color: #00657c;
+  border-radius: 8px;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  border: none;
+  text-align: center;
+  font-family: Thunder;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #00657c;
+  height: 100%;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.thank-you-header h1 {
+  color: white;
+  text-align: center;
+  /* Title */
+  font-family: Thunder;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.thank-you-header p {
+  color: white;
+  text-align: center;
+  /* Body */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#thank-you {
+  height: 400px;
+}
+
+.mobile-form {
+  display: none;
+}
+
+.desktop-form {
+  display: block;
+}
+
+/* Donation Platform Dropdown */
+#donate-menu .form label {
+  color: #1c1c1c;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#donate-menu .form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Suggested Contribution Buttons */
+.suggested-contributions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.contribution-button {
+  flex: 1 0 0;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #ecece2;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  height: 60px;
+  color: #00657c;
+  font-family: Thunder;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.contribution-button.selected {
+  background-color: #00657c;
+  color: white;
+}
+
+#paypal-donation-form {
+  width: 90%;
+}
+
+#paypal-donation-form label {
+  color: #1c1c1c;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Custom Amount Input */
+.custom-amount {
+  margin-bottom: 16px;
+}
+
+.custom-amount label {
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+}
+
+.custom-amount input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+/* PayPal Button Container */
+#paypal-button-container {
+  width: 90%;
+}
+
+#patreon-donation-form {
+  width: 90%;
+}
+
+/* Patreon Button */
+.patreon-button {
+  display: flex;
+  height: 48px;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background-color: #ff5740;
+  border: none;
+  width: 100%;
+  color: #fbfaf7;
+  text-align: center;
+  cursor: pointer;
+  /* Button */
+  font-family: Thunder;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.donate-button {
+  display: flex;
+  height: 48px;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background-color: #ff5740;
+  border: none;
+  width: 100%;
+  color: #fbfaf7;
+  text-align: center;
+  cursor: pointer;
+  /* Button */
+  font-family: Thunder;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1023px) {
+  .suggested-contributions {
+    flex-direction: column;
+  }
+  .contribution-button {
+    width: 100%;
+    flex: none;
+    height: 60px;
+  }
+  .forms-container {
+    width: 90%;
+    height: 85%;
+  }
+  .mobile-form {
+    display: block;
+  }
+  .desktop-form {
+    display: none;
+  }
+  .form-buttons-container {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .background {
+    background-color: white;
+  }
+  .thank-you-header p {
+    color: #00657c;
+  }
+  .thank-you-header h1 {
+    color: #00657c;
+  }
+  .social-media p {
+    color: #00657c;
+  }
+  .forms-header p {
+    font-size: 18px;
+  }
+  #donation-header {
+    font-size: 32px;
+  }
+  #donate-menu {
+    gap: 16px;
+  }
+  .patreon-button {
+    width: 90%;
+  }
+}
 body {
   margin: 0;
   isolation: isolate;

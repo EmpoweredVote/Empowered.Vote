@@ -107,6 +107,15 @@ html {
    gap: 16px;
 }
 
+.social-links a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.social-links a:visited {
+   color: $dark-blue;
+}
+
 .social-links h3 {
    font-family: Thunder;
    font-size: 20px;

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Empowered.Vote</title>
+      <link rel="stylesheet" href="css/styles.css" />
+   </head>
+   <body>
+      <div id="blur-overlay"></div>
+
+      <div class="body-container">
+         <nav class="navbar" id="form-nav">
+            <a href="index.html"><img src="assets/images/Logo.svg" class="logo" /></a>
+            <div class="nav-btn-container">
+               <button class="orange-btn">JOIN US</button>
+               <button class="flex-btn" id="hamburger-menu-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="2" viewBox="0 0 36 2" fill="none">
+                     <path d="M0 1H35.5" stroke="#1C1C1C" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="2" viewBox="0 0 36 2" fill="none">
+                     <path d="M0 1H35.5" stroke="#1C1C1C" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="2" viewBox="0 0 36 2" fill="none">
+                     <path d="M0 1H35.5" stroke="#1C1C1C" />
+                  </svg>
+               </button>
+               <div id="menu" class="menu">
+                  <div class="menu-content">
+                     <div class="menu-items">
+                        <h1><a href="index.html#why-section">WHY SHARED SOLUTIONS</a></h1>
+                        <h1><a href="index.html#how-section">HOW IT WORKS</a></h1>
+                        <h1><a href="forms.html">GET INVOLVED</a></h1>
+                        <h1><a href="index.html#footer-section">CONTACT</a></h1>
+                     </div>
+
+                     <div>
+                        <div class="email-block">
+                           <h3>SAY HELLO</h3>
+                           <p>info@empowered.vote</p>
+                        </div>
+                        <div class="social-links">
+                           <h3>STAY CONNECTED</h3>
+                           <p><a href="">Instagram</a></p>
+                           <p><a href="">LinkedIn</a></p>
+                           <p><a href="">Twitter</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <section class="forms-container" id="main-menu">
+            <div class="forms-header">
+               <h1>Get Involved!</h1>
+               <p>
+                  Thank you for your interest in becoming an Alpha Tester.
+                  <br />
+                  Please select an option below, and we’ll get in touch with you soon.
+               </p>
+            </div>
+            <div class="form-buttons-container">
+               <div class="form-button" id="playtest">
+                  <div class="number">1</div>
+                  <h2 class="button-text">Playtester</h2>
+               </div>
+               <div class="form-button" id="volunteer">
+                  <div class="number">2</div>
+                  <h2 class="button-text">Volunteer</h2>
+               </div>
+               <div class="form-button" id="donate">
+                  <div class="number">3</div>
+                  <h2 class="button-text">Donate</h2>
+               </div>
+            </div>
+         </section>
+
+         <section class="forms-container menu-container" id="volunteer-menu" style="display: none">
+            <button class="back-button" onclick="goBack()">
+               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M19.125 12.3027H5.125"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+                  <path
+                     d="M12.125 19.3027L5.125 12.3027L12.125 5.30273"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+               </svg>
+            </button>
+
+            <div class="forms-header">
+               <h1>Join Us as a Volunteer!</h1>
+               <p>Please select one of the following options to contribute to our project:</p>
+            </div>
+            <div class="form">
+               <form id="volunteer-form">
+                  <!-- First Line: Name and Email -->
+                  <div class="mobile-form">
+                     <div class="form-group full-width">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
+                     </div>
+                     <div class="form-group full-width">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                     </div>
+                  </div>
+
+                  <div class="desktop-form">
+                     <div class="form-row">
+                        <div class="form-group half-width">
+                           <label for="name">Name</label>
+                           <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group half-width">
+                           <label for="email">Email</label>
+                           <input type="email" id="email" name="email" required />
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Second Line: Areas of Interest -->
+                  <div class="form-group full-width">
+                     <label for="interest">Areas of Interest:</label>
+                     <select id="interest" name="interest" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Development">Development</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Design">Design</option>
+                        <option value="Other">Other</option>
+                     </select>
+                  </div>
+
+                  <!-- Third Line: Preferred Features to Test -->
+                  <div class="form-group full-width">
+                     <label for="features">Preferred Features to Work On</label>
+                     <input type="text" id="features" name="features" />
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="submit-button">Submit</button>
+               </form>
+            </div>
+         </section>
+
+         <section class="forms-container menu-container" id="playtest-menu" style="display: none">
+            <button class="back-button" onclick="goBack()">
+               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M19.125 12.3027H5.125"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+                  <path
+                     d="M12.125 19.3027L5.125 12.3027L12.125 5.30273"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+               </svg>
+            </button>
+
+            <div class="forms-header">
+               <h1>Get Involved!</h1>
+               <p>
+                  Please select one of the following options
+                  <br />
+                  to contribute to our project:
+               </p>
+            </div>
+
+            <div class="form">
+               <form id="playtest-form">
+                  <!-- First Line: Name and Email -->
+                  <div class="mobile-form">
+                     <div class="form-group full-width">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
+                     </div>
+                     <div class="form-group full-width">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                     </div>
+                  </div>
+
+                  <div class="desktop-form">
+                     <div class="form-row">
+                        <div class="form-group half-width">
+                           <label for="name">Name</label>
+                           <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group half-width">
+                           <label for="email">Email</label>
+                           <input type="email" id="email" name="email" required />
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Second Line: Preferred Features to Test -->
+                  <div class="form-group full-width">
+                     <label for="features">Preferred Features to Test</label>
+                     <input type="text" id="features" name="features" />
+                  </div>
+
+                  <!-- Third Line: Areas of Interest -->
+                  <div class="form-group full-width">
+                     <label for="experience">Testing Experience:</label>
+                     <select id="experience" name="experience" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Expert">Expert</option>
+                     </select>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="submit-button">Submit</button>
+               </form>
+            </div>
+         </section>
+
+         <section class="forms-container menu-container" id="donate-menu" style="display: none">
+            <button class="back-button" onclick="goBack()">
+               <!-- Back button SVG -->
+               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M19.125 12.3027H5.125"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+                  <path
+                     d="M12.125 19.3027L5.125 12.3027L12.125 5.30273"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+               </svg>
+            </button>
+
+            <div class="forms-header">
+               <h1 id="donation-header">Support Our Project with a Donation!</h1>
+               <p>Your support makes a difference! If you’d like to donate, please fill out the form below.</p>
+            </div>
+
+            <!-- Donation Platform Dropdown -->
+            <div class="form">
+               <label for="donation-platform">Donation Platform:</label>
+               <select id="donation-platform">
+                  <option value="paypal">PayPal</option>
+                  <option value="patreon">Patreon</option>
+               </select>
+            </div>
+
+            <!-- PayPal Donation Form -->
+            <div id="paypal-donation-form">
+               <label>Suggested Contribution:</label>
+               <div class="suggested-contributions">
+                  <button type="button" class="contribution-button" data-amount="5">$5</button>
+                  <button type="button" class="contribution-button" data-amount="10">$10</button>
+                  <button type="button" class="contribution-button" data-amount="25">$25</button>
+               </div>
+
+               <!-- Custom Amount Input -->
+               <div class="form-group custom-amount">
+                  <input type="number" id="custom-amount-input" min="1" step="0.01" placeholder="Custom Amount" />
+               </div>
+
+               <!-- Donate Button -->
+               <button type="button" id="donate-button" class="donate-button">Donate</button>
+            </div>
+
+            <!-- Patreon Donation Form -->
+            <div id="patreon-donation-form" style="display: none">
+               <!-- <a href="https://www.patreon.com/c/empoweredvote/" target="_blank" class="patreon-button"
+                  >Subscribe on Patreon</a
+               > -->
+               <button
+                  type="button"
+                  class="donate-button"
+                  onclick="location.href = 'https://www.patreon.com/c/empoweredvote/'"
+               >
+                  Donate
+               </button>
+            </div>
+         </section>
+
+         <section class="forms-container menu-container" id="thank-you" style="display: none">
+            <button class="back-button" onclick="goBack()">
+               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M19.125 12.3027H5.125"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+                  <path
+                     d="M12.125 19.3027L5.125 12.3027L12.125 5.30273"
+                     stroke="black"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                  />
+               </svg>
+            </button>
+
+            <div class="background">
+               <div class="thank-you-header">
+                  <h1>Thank You for Your Contribution!</h1>
+                  <p>
+                     Your involvement means the world to us, and we’re
+                     <br />
+                     thrilled to have you on board.
+                  </p>
+               </div>
+
+               <div class="social-media">
+                  <p>Join our community!</p>
+                  <div class="media-button-container">
+                     <button class="media-button">Instagram</button>
+                     <button class="media-button">LinkedIn</button>
+                     <button class="media-button">Discord</button>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+
+      <script src="js/forms.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="js/menu.js"></script>
+   </body>
+</html>
