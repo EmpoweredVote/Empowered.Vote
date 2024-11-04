@@ -1483,6 +1483,10 @@ body {
 
 .forms-header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .forms-header h1 {
@@ -1900,7 +1904,22 @@ span {
   flex-direction: column;
 }
 
+.menu-desc {
+  max-width: 500px;
+  display: block;
+}
+
+.menu-desc-mobile {
+  display: none;
+}
+
 @media (max-width: 1023px) {
+  .menu-desc-mobile {
+    display: block;
+  }
+  .menu-desc {
+    display: none;
+  }
   .form-row {
     flex-direction: column;
   }
@@ -1946,14 +1965,20 @@ span {
   .forms-header p {
     font-size: 18px;
   }
-  #donation-header {
-    font-size: 32px;
+  .forms-header h1 {
+    font-size: 48px;
+  }
+  #volunteer-title {
+    max-width: 300px;
   }
   #donate-menu {
     gap: 16px;
   }
   .patreon-button {
     width: 90%;
+  }
+  #main-title {
+    font-size: 64px;
   }
 }
 body {

@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
          // Send data to Google Apps Script Web App
          fetch(
-            'https://script.google.com/macros/s/AKfycbwziiIQ3z8Uu6EyHzxunYmUWkdVoYkHuphQu7fTJOJNuM4WRWnKc21IQilg_GkEkZMaZw/exec',
+            'https://script.google.com/macros/s/AKfycbzukjju7u-pfsZFGCbBGhMs0uDnNShNh0qMv3yQu0axbE3Nea0A5kwV5Z-HQ6Eh7kmC/exec',
             {
                method: 'POST',
                mode: 'no-cors',
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
          // Send data to Google Apps Script Web App
          fetch(
-            'https://script.google.com/macros/s/AKfycbzJpVEs7laM0T7qbNiRswj1K2LV1xZlmYJU8E0gF0z701gR5wAPdyDMhI9sNStqRkoTfA/exec',
+            'https://script.google.com/macros/s/AKfycbzukjju7u-pfsZFGCbBGhMs0uDnNShNh0qMv3yQu0axbE3Nea0A5kwV5Z-HQ6Eh7kmC/exec',
             {
                method: 'POST',
                mode: 'no-cors',
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
          return;
       }
 
-      const paypalBusinessID = 'jackconnerdoyle2@gmail.com';
+      const paypalBusinessID = 'chris@empowered.vote';
 
       const paypalURL = `https://www.paypal.com/donate?business=${encodeURIComponent(
          paypalBusinessID

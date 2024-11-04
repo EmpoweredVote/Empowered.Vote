@@ -41,9 +41,8 @@
                         </div>
                         <div class="social-links">
                            <h3>STAY CONNECTED</h3>
-                           <p><a href="">Instagram</a></p>
-                           <p><a href="">LinkedIn</a></p>
-                           <p><a href="">Twitter</a></p>
+                           <p><a href="https://www.youtube.com/@empoweredvote" target="_blank">Youtube</a></p>
+                           <p><a href="https://www.patreon.com/c/empoweredvote" target="_blank">Patreon</a></p>
                         </div>
                      </div>
                   </div>
@@ -52,11 +51,14 @@
          </nav>
          <section class="forms-container" id="main-menu">
             <div class="forms-header">
-               <h1>Get Involved!</h1>
-               <p>
-                  Thank you for your interest in becoming an Alpha Tester.
-                  <br />
-                  Please select an option below, and we’ll get in touch with you soon.
+               <h1 id="main-title">Get Involved!</h1>
+               <p class="menu-desc">
+                  Thank you for your interest in helping us out! We have a few different ways to contribute. We will
+                  never sell your contact information to anyone.
+               </p>
+               <p class="menu-desc-mobile">
+                  Thank you for your interest in helping us out! We have a few different ways to contribute. We will
+                  never sell your contact information to anyone.
                </p>
             </div>
             <div class="form-buttons-container">
@@ -96,11 +98,18 @@
             </button>
 
             <div class="forms-header">
-               <h1>Join Us as a Volunteer!</h1>
-               <p>Please select one of the following options to contribute to our project:</p>
+               <h1 id="volunteer-title">Join Us as a Volunteer!</h1>
+               <p class="menu-desc">
+                  If you have cycles that you'd like to donate towards the development of Empowered Vote, you can
+                  reference the dropdown to view the roles we are looking for!
+               </p>
+               <p class="menu-desc-mobile">
+                  Want to contribute to Empowered Vote? Check the dropdown for roles we’re seeking!
+               </p>
             </div>
             <div class="form">
                <form id="volunteer-form">
+                  <input type="hidden" name="formType" value="volunteer" />
                   <!-- First Line: Name and Email -->
                   <div class="form-row">
                      <div class="form-group">
@@ -112,46 +121,28 @@
                         <input type="email" id="volunteer-email" name="email" />
                      </div>
                   </div>
-                  <!-- <div class="mobile-form">
-                     <div class="form-group full-width">
-                        <label for="volunteer-name">Name</label>
-                        <input type="text" id="volunteer-name" name="name" />
-                     </div>
-                     <div class="form-group full-width">
-                        <label for="volunteer-email">Email</label>
-                        <input type="email" id="volunteer-email" name="email" />
-                     </div>
-                  </div>
-
-                  <div class="desktop-form">
-                     <div class="form-row">
-                        <div class="form-group half-width">
-                           <label for="volunteer-name">Name</label>
-                           <input type="text" id="volunteer-name" name="name" />
-                        </div>
-                        <div class="form-group half-width">
-                           <label for="volunteer-email">Email</label>
-                           <input type="email" id="volunteer-email" name="email" />
-                        </div>
-                     </div>
-                  </div> -->
 
                   <!-- Second Line: Areas of Interest -->
                   <div class="form-group full-width">
-                     <label for="interest">Areas of Interest:</label>
+                     <label for="interest">Areas of Interest</label>
                      <select id="interest" name="interest" required>
                         <option value="" disabled selected>Select an option</option>
-                        <option value="Development">Development</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Design">Design</option>
+                        <option value="Production">Production</option>
+                        <option value="Visual Design">Visual Design</option>
+                        <option value="Web Engineering">Web Engineering</option>
+                        <option value="Community Management">Community Management</option>
+                        <option value="Video Editing">Video Editing</option>
                         <option value="Other">Other</option>
                      </select>
                   </div>
 
                   <!-- Third Line: Preferred Features to Test -->
                   <div class="form-group full-width">
-                     <label for="features">Preferred Features to Work On</label>
-                     <input type="text" id="features" name="features" />
+                     <label for="otherSkills"
+                        >If you don't see your skill set here but would still like to help us out, let us know how you'd
+                        like to contribute here</label
+                     >
+                     <input type="text" id="otherSkills" name="otherSkills" />
                   </div>
 
                   <!-- Submit Button -->
@@ -181,16 +172,22 @@
             </button>
 
             <div class="forms-header">
-               <h1>Get Involved!</h1>
-               <p>
-                  Please select one of the following options
-                  <br />
-                  to contribute to our project:
+               <h1 class="form-title">Playtester</h1>
+               <p class="menu-desc">
+                  Throughout the process of developing features, we will gather feedback from our members to make sure
+                  we are delivering on what we set out to do. If you'd like to be reached periodically to provide
+                  feedback on unfinished features, you can provide your contact information here and we will add you to
+                  that mailing list.
+               </p>
+               <p class="menu-desc-mobile">
+                  Want to test new features before release? Share your contact to join our playtester list for early
+                  feedback opportunities.
                </p>
             </div>
 
             <div class="form">
                <form id="playtest-form">
+                  <input type="hidden" name="formType" value="playtest" />
                   <!-- First Line: Name and Email -->
                   <div class="form-row">
                      <div class="form-group">
@@ -202,29 +199,6 @@
                         <input type="email" id="playtest-email" name="email" />
                      </div>
                   </div>
-                  <!-- <div class="mobile-form">
-                     <div class="form-group full-width">
-                        <label for="playtest-name">Name</label>
-                        <input type="text" id="playtest-name" name="name" />
-                     </div>
-                     <div class="form-group full-width">
-                        <label for="playtest-email">Email</label>
-                        <input type="email" id="playtest-email" name="email" />
-                     </div>
-                  </div>
-
-                  <div class="desktop-form">
-                     <div class="form-row">
-                        <div class="form-group half-width">
-                           <label for="playtest-name">Name</label>
-                           <input type="text" id="playtest-name" name="name" />
-                        </div>
-                        <div class="form-group half-width">
-                           <label for="playtest-email">Email</label>
-                           <input type="email" id="playtest-email" name="email" />
-                        </div>
-                     </div>
-                  </div> -->
 
                   <!-- Second Line: Preferred Features to Test -->
                   <div class="form-group full-width">
@@ -233,15 +207,15 @@
                   </div>
 
                   <!-- Third Line: Areas of Interest -->
-                  <div class="form-group full-width">
-                     <label for="experience">Testing Experience:</label>
+                  <!-- <div class="form-group full-width">
+                     <label for="experience">Testing Experience</label>
                      <select id="experience" name="experience" required>
                         <option value="" disabled selected>Select an option</option>
                         <option value="Beginner">Beginner</option>
                         <option value="Intermediate">Intermediate</option>
                         <option value="Expert">Expert</option>
                      </select>
-                  </div>
+                  </div> -->
 
                   <!-- Submit Button -->
                   <button type="submit" class="submit-button">Submit</button>
@@ -271,8 +245,15 @@
             </button>
 
             <div class="forms-header">
-               <h1 id="donation-header">Support Our Project with a Donation!</h1>
-               <p>Your support makes a difference! If you’d like to donate, please fill out the form below.</p>
+               <h1 class="form-title">Support Our Project with a Donation!</h1>
+               <p class="menu-desc">
+                  Your support makes a difference! Small micro-donations on a consistent schedule allow us to achieve
+                  our mission responsibly.
+               </p>
+               <p class="menu-desc-mobile">
+                  Your support makes a difference! Small micro-donations on a consistent schedule allow us to achieve
+                  our mission responsibly.
+               </p>
             </div>
 
             <!-- Donation Platform Dropdown -->
@@ -286,7 +267,7 @@
 
             <!-- PayPal Donation Form -->
             <div id="paypal-donation-form">
-               <label>Suggested Contribution:</label>
+               <label>One-Off Contribution</label>
                <div class="suggested-contributions">
                   <button type="button" class="contribution-button" data-amount="5">$5</button>
                   <button type="button" class="contribution-button" data-amount="10">$10</button>
