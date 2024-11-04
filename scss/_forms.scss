@@ -11,7 +11,6 @@ body {
 
    display: flex;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
 }
 
@@ -481,6 +480,11 @@ span {
    display: none;
 }
 @media (max-width: 1023px) {
+   .body-container {
+      height: 100%;
+      min-height: 800px;
+   }
+
    .menu-desc-mobile {
       display: block;
    }
@@ -509,8 +513,8 @@ span {
    }
 
    .forms-container {
-      width: 90%;
-      height: 85%;
+      width: 85%;
+      height: 100%;
    }
 
    .mobile-form {
@@ -563,11 +567,28 @@ span {
       gap: 16px;
    }
 
+   #donation-title {
+      margin-top: 30px;
+   }
+
+   .donation-label {
+      display: block;
+      margin-bottom: 12px;
+   }
+
    .patreon-button {
       width: 90%;
    }
 
    #main-title {
       font-size: 64px;
+   }
+
+   #main-form-buttons {
+      margin-bottom: 30px;
+   }
+
+   #main-form-header {
+      margin-top: 30px;
    }
 }

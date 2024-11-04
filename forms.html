@@ -49,8 +49,9 @@
                </div>
             </div>
          </nav>
+
          <section class="forms-container" id="main-menu">
-            <div class="forms-header">
+            <div class="forms-header" id="main-form-header">
                <h1 id="main-title">Get Involved!</h1>
                <p class="menu-desc">
                   Thank you for your interest in helping us out! We have a few different ways to contribute. We will
@@ -61,7 +62,7 @@
                   never sell your contact information to anyone.
                </p>
             </div>
-            <div class="form-buttons-container">
+            <div class="form-buttons-container" id="main-form-buttons">
                <div class="form-button" id="playtest">
                   <div class="number">1</div>
                   <h2 class="button-text">Playtester</h2>
@@ -98,7 +99,7 @@
             </button>
 
             <div class="forms-header">
-               <h1 id="volunteer-title">Join Us as a Volunteer!</h1>
+               <h1 id="volunteer-title">Join us as a Volunteer!</h1>
                <p class="menu-desc">
                   If you have cycles that you'd like to donate towards the development of Empowered Vote, you can
                   reference the dropdown to view the roles we are looking for!
@@ -139,8 +140,7 @@
                   <!-- Third Line: Preferred Features to Test -->
                   <div class="form-group full-width">
                      <label for="otherSkills"
-                        >If you don't see your skill set here but would still like to help us out, let us know how you'd
-                        like to contribute here</label
+                        >If you selected Other, let us know how you'd like to contribute here</label
                      >
                      <input type="text" id="otherSkills" name="otherSkills" />
                   </div>
@@ -245,7 +245,7 @@
             </button>
 
             <div class="forms-header">
-               <h1 class="form-title">Support Our Project with a Donation!</h1>
+               <h1 class="form-title" id="donation-title">Support us with a Donation!</h1>
                <p class="menu-desc">
                   Your support makes a difference! Small micro-donations on a consistent schedule allow us to achieve
                   our mission responsibly.
@@ -258,7 +258,7 @@
 
             <!-- Donation Platform Dropdown -->
             <div class="form">
-               <label for="donation-platform">Donation Platform:</label>
+               <label for="donation-platform" class="donation-label">Donation Platform:</label>
                <select id="donation-platform">
                   <option value="paypal">PayPal</option>
                   <option value="patreon">Patreon</option>
@@ -267,7 +267,7 @@
 
             <!-- PayPal Donation Form -->
             <div id="paypal-donation-form">
-               <label>One-Off Contribution</label>
+               <label class="donation-label">One-Off Contribution</label>
                <div class="suggested-contributions">
                   <button type="button" class="contribution-button" data-amount="5">$5</button>
                   <button type="button" class="contribution-button" data-amount="10">$10</button>
