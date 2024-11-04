@@ -705,6 +705,7 @@ nav {
   background-color: #ff5740;
   border-radius: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .arrow:disabled {
@@ -1951,13 +1952,17 @@ span {
     gap: 16px;
   }
   .background {
+    display: block;
     background-color: white;
+    padding: 0;
+    height: auto;
   }
   .thank-you-header p {
     color: #00657c;
   }
   .thank-you-header h1 {
     color: #00657c;
+    font-size: 48px;
   }
   .social-media p {
     color: #00657c;

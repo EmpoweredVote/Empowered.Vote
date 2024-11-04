@@ -528,7 +528,10 @@ span {
    }
 
    .background {
+      display: block;
       background-color: white;
+      padding: 0;
+      height: auto;
    }
 
    .thank-you-header p {
@@ -537,6 +540,7 @@ span {
 
    .thank-you-header h1 {
       color: $dark-blue;
+      font-size: 48px;
    }
 
    .social-media p {
