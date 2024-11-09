@@ -1,18 +1,19 @@
 {
-  "name": "empowered.vote",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "sass": "^1.77.8"
-  },
-  "dependencies": {
-    "gsap": "^3.12.5"
-  }
+   "name": "empowered.vote",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "description": "",
+   "devDependencies": {
+      "sass": "^1.77.8"
+   },
+   "dependencies": {
+      "gsap": "^3.12.5",
+      "gsap-trial": "^3.12.5"
+   }
 }

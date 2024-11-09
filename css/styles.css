@@ -49,7 +49,7 @@
   border: none;
   cursor: pointer;
   z-index: 100;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 @media (min-width: 1024px) {
@@ -1173,7 +1173,7 @@ html {
   display: flex;
   flex-direction: column;
   width: calc(100vw - 100px);
-  height: calc(100vh - 400px);
+  height: calc(100vh - 350px);
   padding: 24px;
   gap: 4px;
   justify-content: space-between;
