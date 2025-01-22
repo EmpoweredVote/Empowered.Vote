@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    const donationPlatformSelect = document.getElementById('donation-platform');
    const paypalForm = document.getElementById('paypal-donation-form');
-   const patreonForm = document.getElementById('patreon-donation-form');
+   const zeffyForm = document.getElementById('zeffy-donation-form');
    const suggestedButtons = document.querySelectorAll('.contribution-button');
    const customAmountInput = document.getElementById('custom-amount-input');
    let selectedAmount = null;
@@ -169,10 +169,10 @@ document.addEventListener('DOMContentLoaded', function () {
    donationPlatformSelect.addEventListener('change', function () {
       if (this.value === 'paypal') {
          paypalForm.style.display = 'block';
-         patreonForm.style.display = 'none';
-      } else if (this.value === 'patreon') {
+         zeffyForm.style.display = 'none';
+      } else if (this.value === 'zeffy') {
          paypalForm.style.display = 'none';
-         patreonForm.style.display = 'block';
+         zeffyForm.style.display = 'block';
       }
    });
 

@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Empowered.Vote</title>
       <link rel="stylesheet" href="css/styles.css" />
+      <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
    </head>
    <body>
       <div id="blur-overlay"></div>
@@ -261,8 +262,13 @@
                <label for="donation-platform" class="donation-label">Donation Platform:</label>
                <select id="donation-platform">
                   <option value="paypal">PayPal</option>
-                  <option value="patreon">Patreon</option>
+                  <option value="zeffy">Zeffy</option>
                </select>
+            </div>
+
+            <!-- Zeffy Donation Form -->
+            <div id="zeffy-donation-form" style="display: none">
+               <button type="button" class="donate-button" zeffy-form-link="https://www.zeffy.com/embed/donation-form/support-shared-solutions-and-empowered-vote?modal=true">Donate</button>
             </div>
 
             <!-- PayPal Donation Form -->
@@ -274,20 +280,15 @@
                   <button type="button" class="contribution-button" data-amount="25">$25</button>
                </div>
 
-               <!-- Custom Amount Input -->
                <div class="form-group custom-amount">
                   <input type="number" id="custom-amount-input" min="1" step="0.01" placeholder="Custom Amount" />
                </div>
 
-               <!-- Donate Button -->
                <button type="button" id="donate-button" class="donate-button">Donate</button>
             </div>
 
             <!-- Patreon Donation Form -->
-            <div id="patreon-donation-form" style="display: none">
-               <!-- <a href="https://www.patreon.com/c/empoweredvote/" target="_blank" class="patreon-button"
-                  >Subscribe on Patreon</a
-               > -->
+            <!-- <div id="patreon-donation-form" style="display: none">
                <button
                   type="button"
                   class="donate-button"
@@ -295,7 +296,7 @@
                >
                   Donate
                </button>
-            </div>
+            </div> -->
          </section>
 
          <section class="forms-container menu-container" id="thank-you" style="display: none">

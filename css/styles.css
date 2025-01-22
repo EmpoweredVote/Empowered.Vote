@@ -709,7 +709,7 @@ nav {
 }
 
 .arrow:disabled {
-  background-color: #ffb1a6;
+  background-color: rgb(255, 176.7172774869, 166);
   cursor: not-allowed;
 }
 
@@ -1846,12 +1846,12 @@ span {
   width: 90%;
 }
 
-#patreon-donation-form {
+#zeffy-donation-form {
   width: 90%;
 }
 
-/* Patreon Button */
-.patreon-button {
+/* Zeffy Button */
+.zeffy-button {
   display: flex;
   height: 48px;
   padding: 8px 24px;
@@ -1897,6 +1897,25 @@ span {
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.zeffy-btn {
+  background-color: #ff5740;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  left: calc(50% - 75px);
+  margin: 10px;
+  min-height: 50px;
+  min-width: 150px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  top: calc(50% - 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #volunteer-form {
@@ -1989,7 +2008,7 @@ span {
     display: block;
     margin-bottom: 12px;
   }
-  .patreon-button {
+  .zeffy-button {
     width: 90%;
   }
   #main-title {
