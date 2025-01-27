@@ -1978,6 +1978,8 @@ span {
   .forms-container {
     width: 85%;
     height: 100%;
+    min-height: 450px;
+    max-height: 700px;
   }
   .mobile-form {
     display: block;
