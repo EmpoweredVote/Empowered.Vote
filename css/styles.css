@@ -1906,6 +1906,13 @@ span {
   margin-top: 10%;
 }
 
+.form-border {
+  border: 1px solid #d4d4d4;
+  max-width: 601px;
+  width: 100%;
+  border-radius: 20px;
+}
+
 .zeffy-btn {
   background-color: #ff5740;
   border: none;
@@ -1940,6 +1947,9 @@ span {
 }
 
 @media (max-width: 1023px) {
+  .form-border {
+    border: none;
+  }
   .body-container {
     height: 100%;
     min-height: 800px;
