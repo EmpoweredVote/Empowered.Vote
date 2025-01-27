@@ -1899,6 +1899,13 @@ span {
   text-transform: uppercase;
 }
 
+.center-givebutter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
 .zeffy-btn {
   background-color: #ff5740;
   border: none;

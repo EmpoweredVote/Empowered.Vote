@@ -2,6 +2,7 @@ body {
    box-sizing: border-box;
 }
 
+
 .body-container {
    background-color: $dark-blue;
    margin: 16px 16px;
@@ -466,6 +467,12 @@ span {
    text-transform: uppercase;
 }
 
+.center-givebutter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10%;
+}
 
 .zeffy-btn {
    background-color: $orange;
