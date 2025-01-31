@@ -1173,7 +1173,7 @@ html {
   display: flex;
   flex-direction: column;
   width: calc(100vw - 100px);
-  height: calc(100vh - 350px);
+  height: auto;
   padding: 24px;
   gap: 4px;
   justify-content: space-between;
@@ -1333,7 +1333,7 @@ html {
   }
   .menu.active {
     width: 35vw;
-    height: 60vh;
+    height: auto;
     border-radius: 10px;
     padding: 24px;
     border-radius: 10px;

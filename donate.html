@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Empowered.Vote</title>
-        <!-- <script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=cVbIFjpnVe5a1wo1&p=other"></script> -->
-        <script>
-            window.Givebutter=window.Givebutter||function(){(Givebutter.q=Givebutter.q||[]).push(arguments)};Givebutter.l=+new Date;
-            window.Givebutter('setOptions', {
-                accountId: "cVbIFjpnVe5a1wo1", // Visit your Dashboard to find your Account ID.
-            });
-        </script>
-        <script async src="https://js.givebutter.com/elements/latest.js"></script>
-        <link rel="stylesheet" href="css/styles.css" />
+<head>
+  <meta charset="UTF-8">
+  <title>Empowered.Vote - Donate</title>
+  <style>
+    /* Center the page content */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
 
-    </head>
-    <body>
-         <div class="center-givebutter">
-            <div class="form-border">
-                <div givebutter-element='giving-form' givebutter-campaign='G3E9U9' givebutter-iframe-width="100%"></div>
-            </div>
-         </div>
+    /* Spinner styling */
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 6px solid #f3f3f3;       /* light gray outer border */
+      border-top: 6px solid #3498db;   /* blue “highlight” */
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
 
-        <!-- <givebutter-widget id="jb95Pp" align="center"></givebutter-widget> -->
-        <!-- <div style="position:relative;overflow:hidden;height:1200px;width:100%;">
-            <iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' src='https://www.zeffy.com/embed/donation-form/support-shared-solutions-and-empowered-vote' allowpaymentrequest allowTransparency="true"></iframe>
-        </div> -->
-    </body>
+    /* Keyframes for spinning effect */
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Optional loading text styling */
+    .loading-text {
+      margin-top: 20px;
+      color: #666;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="spinner"></div>
+
+  <script>
+    setTimeout(function() {
+      window.location.replace("https://givebutter.com/g3e9u9");
+    }, 1500);
+  </script>
+</body>
 </html>
